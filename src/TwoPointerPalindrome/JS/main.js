@@ -10,8 +10,6 @@ function isPalindrome(s) {
             return false;
         }
 
-        console.log("They are the same, thus we move the two pointers toward the middle to continue the \tverification process.");
-
         left++; // Heading towards the right
         right--; // Heading towards the left
     }
