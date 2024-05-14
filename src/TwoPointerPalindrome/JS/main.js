@@ -3,7 +3,7 @@ function isPalindrome(s) {
         right = s.length - 1;
 
     while (left < right) {
-        console.log(`Current elements being pointed to by the left index: '${s[left]}' and right index: '${s[right]}'`);
+        console.log(`Current elements left index: '${s[left]}' and right index: '${s[right]}'`);
 
         if (s[left] != s[right]) { // If the elements at index l and index r are not equal,
             console.log("The elements aren't the same, hence we return false");
@@ -14,7 +14,6 @@ function isPalindrome(s) {
 
         left++; // Heading towards the right
         right--; // Heading towards the left
-        // console.log(`The new element at the left pointer is ${s[left]}, and right pointer is ${s[right]}`);
     }
 
     // We reached the middle of the string without finding a mismatch, so it is a palindrome.
