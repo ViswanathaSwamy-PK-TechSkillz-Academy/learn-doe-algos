@@ -1,4 +1,4 @@
-function findSumOfThree(nums, target) {
+export function findSumOfThree(nums: number[], target: number): boolean {
     // Sort the array in ascending order
     nums.sort((a, b) => a - b);
 
@@ -28,10 +28,8 @@ function findSumOfThree(nums, target) {
     return false;
 }
 
-module.exports = { findSumOfThree };
-
 // Example usage
-const nums = [1, 4, 2, 7, 5, 3];
-const target = 10;
+const nums: number[] = [1, 4, 2, 7, 5, 3];
+const target: number = 10;
 
 console.log('Sum of Three Numbers: ', findSumOfThree(nums, target)); // Output: true
