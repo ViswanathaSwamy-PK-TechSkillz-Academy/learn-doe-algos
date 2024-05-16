@@ -2,11 +2,9 @@ function findSumOfThree(nums, target) {
     // Sort the array in ascending order
     nums.sort((a, b) => a - b);
 
-    const n = nums.length;
-
-    for (let i = 0; i < n - 2; i++) {
+    for (let i = 0; i < nums.length - 2; i++) {
         let left = i + 1;
-        let right = n - 1;
+        let right = nums.length - 1;
 
         while (left < right) {
             const sum = nums[i] + nums[left] + nums[right];
