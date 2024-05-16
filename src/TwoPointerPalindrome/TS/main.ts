@@ -10,12 +10,11 @@ function isPalindromeTS(s: string): boolean {
             return false;
         }
 
-        left++; // Heading towards the right
-        right--; // Heading towards the left
+        left++;         // Heading towards the right
+        right--;        // Heading towards the left
     }
-
-    // We reached the middle of the string without finding a mismatch, so it is a palindrome.
-    return true;
+    
+    return true;        // We reached the middle of the string without finding a mismatch, so it is a palindrome.
 }
 
 function mainTs() {

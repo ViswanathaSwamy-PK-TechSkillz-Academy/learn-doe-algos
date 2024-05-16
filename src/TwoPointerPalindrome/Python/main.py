@@ -9,11 +9,10 @@ def is_palindrome(s):
             print("The elements aren't the same, hence we return False")
             return False
 
-        left += 1  # Heading towards the right
-        right -= 1  # Heading towards the left
+        left += 1       # Heading towards the right
+        right -= 1      # Heading towards the left
 
-    # We reached the middle of the string without finding a mismatch, so it is a palindrome.
-    return True
+    return True     # We reached the middle of the string without finding a mismatch, so it is a palindrome.
 
 
 def main():
