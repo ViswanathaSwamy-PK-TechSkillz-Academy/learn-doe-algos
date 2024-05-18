@@ -14,8 +14,7 @@ class LinkedList {
             }
         };
 
-        // createLinkedList method will create the linked list using the
-        // given integer array with the help of InsertAthead method.
+        // createLinkedList method will create the linked list using the given integer array with the help of InsertAthead method.
         this.createLinkedList = function (list) {
             list.reverse().forEach((element) => {
                 let newNode = new LinkedListNode(element);
@@ -25,8 +24,8 @@ class LinkedList {
 
         // This method will display the elements of the linked list.
         this.display = function () {
-            let result = "",
-                temp = this.head;
+            let result = "", temp = this.head;
+            
             while (temp != null) {
                 result += temp.data;
                 temp = temp.next;
