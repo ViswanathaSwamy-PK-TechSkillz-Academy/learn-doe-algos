@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TwoPointerPalindrome", "Two
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CS", "CS", "{ADF38021-1FCA-4ACA-AE6E-21513A4E2F4E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tpp.Algo", "TwoPointerPalindrome\CS\Tpp.Algo\Tpp.Algo.csproj", "{53452902-CF4B-42D4-BE80-7539860BF669}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tpp.Algo", "TwoPointerPalindrome\CS\Tpp.Algo\Tpp.Algo.csproj", "{53452902-CF4B-42D4-BE80-7539860BF669}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

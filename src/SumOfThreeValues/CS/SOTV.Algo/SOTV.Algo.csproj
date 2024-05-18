@@ -10,5 +10,4 @@
 	<ItemGroup>
 		<Using Include="System.Console" Static="True" />
 	</ItemGroup>
-
 </Project>

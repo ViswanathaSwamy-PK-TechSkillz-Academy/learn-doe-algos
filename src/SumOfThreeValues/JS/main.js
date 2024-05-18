@@ -1,31 +1,24 @@
 function findSumOfThree(nums, target) {
-    // Sort the array in ascending order
-    nums.sort((a, b) => a - b);
+    nums.sort((a, b) => a - b);     // Sort the array in ascending order
 
-    const n = nums.length;
-
-    for (let i = 0; i < n - 2; i++) {
+    for (let i = 0; i < nums.length - 2; i++) {
         let left = i + 1;
-        let right = n - 1;
+        let right = nums.length - 1;
 
         while (left < right) {
             const sum = nums[i] + nums[left] + nums[right];
 
             if (sum === target) {
-                // Triplet found!
-                return true;
+                return true;        // Triplet found!
             } else if (sum < target) {
-                // Move left pointer to increase the sum
-                left++;
+                left++;             // Move left pointer to increase the sum
             } else {
-                // Move right pointer to decrease the sum
-                right--;
+                right--;            // Move right pointer to decrease the sum
             }
         }
     }
 
-    // No triplet found
-    return false;
+    return false;       // Triplet not found
 }
 
 module.exports = { findSumOfThree };

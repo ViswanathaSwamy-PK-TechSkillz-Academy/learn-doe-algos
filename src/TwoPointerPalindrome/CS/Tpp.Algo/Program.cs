@@ -1,17 +1,4 @@
-﻿string[] testCases = { "RACEACAR", "A", "ABCDEFGFEDCBA", "ABC", "ABCBA", "ABBA", "RACEACAR" };
-int i = 1;
-
-foreach (string s in testCases)
-{
-    WriteLine($"Test Case #{i}");
-    WriteLine(new string('-', 100));
-    WriteLine($"The input string is '{s}' and the length of the string is {s.Length}.");
-    WriteLine("\nIs it a palindrome?..... " + IsPalindrome(s));
-    WriteLine(new string('-', 100));
-    i++;
-}
-
-static bool IsPalindrome(string s)
+﻿static bool IsPalindrome(string s)
 {
     int left = 0;
     int right = s.Length - 1;
@@ -30,6 +17,19 @@ static bool IsPalindrome(string s)
         right--; // Heading towards the left
     }
 
-    // We reached the middle of the string without finding a mismatch, so it is a palindrome.
     return true;
 }
+
+string[] testCases = { "RACEACAR", "A", "ABCDEFGFEDCBA", "ABC", "ABCBA", "ABBA", "RACEACAR" };
+int i = 1;
+
+foreach (string s in testCases)
+{
+    WriteLine($"Test Case #{i}");
+    WriteLine(new string('-', 100));
+    WriteLine($"The input string is '{s}' and the length of the string is {s.Length}.");
+    WriteLine("\nIs it a palindrome?..... " + IsPalindrome(s));
+    WriteLine(new string('-', 100));
+    i++;
+}
+

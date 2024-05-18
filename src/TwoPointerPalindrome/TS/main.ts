@@ -1,4 +1,4 @@
-function isPalindrome(s: string): boolean {
+function isPalindromeTS(s: string): boolean {
     let left = 0;
     let right = s.length - 1;
 
@@ -10,15 +10,14 @@ function isPalindrome(s: string): boolean {
             return false;
         }
 
-        left++; // Heading towards the right
-        right--; // Heading towards the left
+        left++;         // Heading towards the right
+        right--;        // Heading towards the left
     }
-
-    // We reached the middle of the string without finding a mismatch, so it is a palindrome.
-    return true;
+    
+    return true;        // We reached the middle of the string without finding a mismatch, so it is a palindrome.
 }
 
-function main() {
+function mainTs() {
     const testCases: string[] = ["RACEACAR", "A", "ABCDEFGFEDCBA", "ABC", "ABCBA", "ABBA", "RACEACAR"];
     let i = 1;
 
@@ -26,10 +25,10 @@ function main() {
         console.log(`Test Case #${i}`);
         console.log("-".repeat(100));
         console.log(`The input string is '${s}' and the length of the string is ${s.length}.`);
-        console.log("\nIs it a palindrome?.....", isPalindrome(s));
+        console.log("\nIs it a palindrome?.....", isPalindromeTS(s));
         console.log("-".repeat(100));
         i++;
     });
 }
 
-main();
+mainTs();
