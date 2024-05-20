@@ -4,8 +4,10 @@ I am learning Algorithms from different Video Courses, Books, and Websites
 
 ## Algorithms
 
-> 1. Two Pointer Palindrome
-> 1. Two Pointer Sum Of Three Values
+> 1. TwoPointerPalindrome - Two Pointers
+> 1. SumOfThreeValues - Two Pointers
+> 1. RemoveNthNFEOList - Two Pointers
+> 1. HappyNumber - Fast and Slow Pointers
 
 ## Few Commands
 
