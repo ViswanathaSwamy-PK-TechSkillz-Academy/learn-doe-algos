@@ -12,7 +12,8 @@ def is_palindrome(s):
         left += 1       # Heading towards the right
         right -= 1      # Heading towards the left
 
-    return True     # We reached the middle of the string without finding a mismatch, so it is a palindrome.
+    # We reached the middle of the string without finding a mismatch, so it is a palindrome.
+    return True
 
 
 def main():
