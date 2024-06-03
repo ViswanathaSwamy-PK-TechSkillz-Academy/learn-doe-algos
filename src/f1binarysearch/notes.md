@@ -1,21 +1,90 @@
-# Palindrome Permutations
+# Binary Search
 
-## populating_hashmap.go
+### binary_search.go
 
-This file defines the `Hashmap` struct and its methods.
+This file defines the `binarySearch` function which performs a binary search on a sorted slice of integers.
 
 ```go
 package main
 
-type Hashmap struct {
-    hashmap map[string]int
-}
+// binarySearch performs a binary search on a sorted slice of integers.
+// It returns the index of the target if found, or -1 if the target is not in the slice.
+func binarySearch(nums []int, target int) int {
+    low := 0
+    high := len(nums) - 1
 
-func (this *Hashmap) Insert(x string) {
-    if _, ok := this.hashmap[x]; ok {
-        this.hashmap[x] += 1
-    } else {
-        this.hashmap[x] = 1
+    for low <= high {
+        mid := low + (high-low)/2
+        if nums[mid] == target {
+            return mid
+        }
+        if target < nums[mid] {
+            high = mid - 1
+        } else {
+            low = mid + 1
+        }
+    }
+
+    return -1
+}
+```
+
+### Explanation
+
+1. **Package Declaration**:
+
+   - `package main`: Declares that this file is part of the main package.
+
+2. **binarySearch Function**:
+
+   - `func binarySearch(nums []int, target int) int`: Defines a function named `binarySearch` that takes a slice of integers `nums` and an integer `target`. It returns an integer which is the index of the target if found, or -1 if the target is not in the slice.
+   - Inside the function:
+     - `low := 0` and `high := len(nums) - 1`: Initializes two pointers, `low` and `high`, representing the current range of the search.
+     - `for low <= high { ... }`: A loop that continues as long as `low` is less than or equal to `high`.
+     - `mid := low + (high-low)/2`: Calculates the midpoint of the current range to avoid potential overflow issues.
+     - `if nums[mid] == target { return mid }`: Checks if the midpoint value is the target and returns the index if true.
+     - `if target < nums[mid] { high = mid - 1 } else { low = mid + 1 }`: Adjusts the search range based on the comparison of the midpoint value with the target.
+
+### main.go
+
+This file defines the `main` function to test the `binarySearch` function with various test cases.
+
+Sure, here's the modified `main.go` file based on your requirements:
+
+```go
+package main
+
+import (
+    "fmt"
+    "strings"
+)
+
+func main() {
+    numsLists := [][]int{
+        {},
+        {0, 1},
+        {1, 2, 3},
+        {-1, 0, 3, 5, 9, 12},
+        {-100, -67, -55, -50, -49, -40, -33, -22, -10, -5},
+    }
+
+    targetList := []int{12, 1, 3, 9, -22}
+
+    for i := 0; i < len(numsLists); i++ {
+        nums := numsLists[i]
+        target := targetList[i]
+        index := binarySearch(nums, target)
+
+        fmt.Printf("%d.\tArray to search: %v\n", i+1, strings.Replace(fmt.Sprint(nums), " ", ", ", -1))
+        fmt.Printf("\tTarget: %d\n", target)
+
+        if index != -1 {
+            fmt.Printf("\t%d exists in the slice at index %d\n", target, index)
+        } else {
+            fmt.Printf("\t%d does not exist in the slice, so the return value is %d\n", target, index)
+        }
+
+        fmt.Println(strings.Repeat("-", 100))
     }
 }
 ```
@@ -26,75 +95,28 @@ func (this *Hashmap) Insert(x string) {
 
    - `package main`: Declares that this file is part of the main package.
 
-2. **Hashmap Struct**:
+2. **Imports**:
 
-   - `type Hashmap struct { hashmap map[string]int }`: Defines a struct named `Hashmap` with a single field `hashmap` which is a map with keys of type `string` and values of type `int`. This map will store character counts.
-
-3. **Insert Method**:
-   - `func (this *Hashmap) Insert(x string)`: Defines a method named `Insert` for the `Hashmap` struct. It takes a `string` parameter `x`.
-   - Inside the method:
-     - `if _, ok := this.hashmap[x]; ok { this.hashmap[x] += 1 } else { this.hashmap[x] = 1 }`: This code checks if the character `x` is already present in the hashmap. If it is, it increments the count by 1. If it is not, it adds the character to the hashmap with a count of 1.
-
-### main.go
-
-This file defines the `permutePalindrome` function and the `main` function to test it.
-
-```go
-package main
-
-func permutePalindrome(st string) bool {
-    hm := Hashmap{hashmap: make(map[string]int)}
-
-    for _, char := range st {
-        hm.Insert(string(char)) // Convert rune to string
-    }
-
-    oddCount := 0
-    for _, count := range hm.hashmap {
-        if count%2 != 0 {
-            oddCount++
-        }
-        if oddCount > 1 {
-            return false
-        }
-    }
-
-    return true
-}
-
-func main() {
-    testCases := []string{"code", "aab", "carerac", "racecar", "hello"}
-
-    for _, testCase := range testCases {
-        println("Can \"" + testCase + "\" form a palindrome permutation? ", permutePalindrome(testCase))
-    }
-}
-```
-
-#### Explanation
-
-1. **Package Declaration**:
-
-   - `package main`: Declares that this file is part of the main package.
-
-2. **permutePalindrome Function**:
-
-   - `func permutePalindrome(st string) bool`: Defines a function named `permutePalindrome` that takes a `string` parameter `st` and returns a `bool`.
-   - Inside the function:
-     - `hm := Hashmap{hashmap: make(map[string]int)}`: Initializes a `Hashmap` instance with an empty map.
-     - `for _, char := range st { hm.Insert(string(char)) }`: Iterates through each character in the input string `st`. Each character is a `rune`, so it is converted to a `string` using `string(char)` before calling the `Insert` method to add it to the hashmap.
-     - `oddCount := 0`: Initializes a counter for characters with odd counts.
-     - `for _, count := range hm.hashmap { if count%2 != 0 { oddCount++ } if oddCount > 1 { return false } }`: Iterates through the counts of each character in the hashmap. If a count is odd, it increments the `oddCount`. If `oddCount` exceeds 1, it returns `false` (indicating that the string cannot form a palindrome permutation).
-     - `return true`: If `oddCount` is 0 or 1, it returns `true` (indicating that the string can form a palindrome permutation).
+   - `import "fmt"`: Imports the `fmt` package for formatted I/O.
+   - `import "strings"`: Imports the `strings` package for string manipulation.
 
 3. **main Function**:
+
    - `func main()`: Defines the `main` function which is the entry point of the program.
    - Inside the function:
-     - `testCases := []string{"code", "aab", "carerac", "racecar", "hello"}`: Defines a slice of strings to test the `permutePalindrome` function.
-     - `for _, testCase := range testCases { println("Can \"" + testCase + "\" form a palindrome permutation? ", permutePalindrome(testCase)) }`: Iterates through each test case, calls `permutePalindrome` with the test case string, and prints the result.
+     - `numsLists := [][]int{ ... }`: Initializes a slice of slices of integers to be searched.
+     - `targetList := []int{ ... }`: Initializes a slice of integers which are the targets to be searched for in the respective slices in `numsLists`.
+     - `for i := 0; i < len(numsLists); i++ { ... }`: Iterates through each slice in `numsLists` and the corresponding target in `targetList`.
+     - `nums := numsLists[i]`: Gets the current slice of integers.
+     - `target := targetList[i]`: Gets the current target integer.
+     - `index := binarySearch(nums, target)`: Calls the `binarySearch` function with the current slice and target.
+     - `fmt.Printf("%d.\tArray to search: %v\n", i+1, strings.Replace(fmt.Sprint(nums), " ", ", ", -1))`: Prints the current slice of integers with elements separated by commas.
+     - `fmt.Printf("\tTarget: %d\n", target)`: Prints the current target integer.
+     - `if index != -1 { fmt.Printf("\t%d exists in the slice at index %d\n", target, index) } else { fmt.Printf("\t%d does not exist in the slice, so the return value is %d\n", target, index) }`: Prints whether the target exists in the slice and its index, or indicates that the target was not found and prints `-1`.
+     - `fmt.Println(strings.Repeat("-", 100))`: Prints a line of dashes for visual separation between test cases.
 
 ### How the Code Works Together
 
-- The `populating_hashmap.go` file defines the `Hashmap` struct and its `Insert` method to keep track of character counts.
-- The `main.go` file defines the `permutePalindrome` function to check if a string can be permuted to form a palindrome by using the `Hashmap` to count characters and determine if at most one character has an odd count.
-- The `main` function in `main.go` tests the `permutePalindrome` function with various test cases and prints the results.
+- The `binary_search.go` file defines the `binarySearch` function which performs the binary search algorithm on a sorted slice of integers.
+- The `main.go` file tests the `binarySearch` function with various target values and prints the results.
+- The `main` function in `main.go` initializes test cases, calls the `binarySearch` function for each case, and outputs whether the target was found and at what index.
