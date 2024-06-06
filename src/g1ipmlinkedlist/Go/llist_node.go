@@ -7,14 +7,18 @@ type LinkedListNode struct {
 
 func NewLinkedListNode(data int, next *LinkedListNode) *LinkedListNode {
 	node := new(LinkedListNode)
+
 	node.data = data
 	node.next = next
+
 	return node
 }
 
 func InitLinkedListNode(data int) *LinkedListNode {
 	node := new(LinkedListNode)
+
 	node.data = data
 	node.next = nil
+
 	return node
 }
