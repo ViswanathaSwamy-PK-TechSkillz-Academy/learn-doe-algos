@@ -10,6 +10,8 @@ func isPalindrome(s string) bool {
 	right := len(s) - 1
 
 	for left < right {
+		fmt.Printf("Current elements left index: '%c' and right index: '%c'\n", s[left], s[right])
+
 		if s[left] != s[right] {
 			fmt.Println("The elements aren't the same, hence we return false")
 			return false

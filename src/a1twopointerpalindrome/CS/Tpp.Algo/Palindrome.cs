@@ -12,11 +12,11 @@ public static class PalindromeChecker
 
         while (left < right)
         {
-            Console.WriteLine($"Current elements left index: '{s[left]}' and right index: '{s[right]}'");
+            WriteLine($"Current elements left index: '{s[left]}' and right index: '{s[right]}'");
 
             if (s[left] != s[right])
             {
-                Console.WriteLine("The elements aren't the same, hence we return false");
+                WriteLine("The elements aren't the same, hence we return false");
                 return false;
             }
 
