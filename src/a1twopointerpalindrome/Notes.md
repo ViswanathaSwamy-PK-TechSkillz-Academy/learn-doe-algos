@@ -1,58 +1,101 @@
 # Palindrome Checking Algorithm using Two Pointers
 
-## Few commands
+## Prerequisites
 
-```powershell
+Install `TypeScript` and `ts-node` globally to run the TypeScript code:
+
+```sh
 npm install -g typescript ts-node
 ```
 
-## How to execute
+## How to Execute
 
-```powershell
+Here’s how to run the palindrome checking algorithm in different languages:
+
+### .NET (C#)
+
+```sh
 dotnet run
-go run .
-javac Main.java && java Main
-node .\main.js
-py .\main.py
- ts-node .\main.ts
 ```
 
-## Explaination of the algorithm
+### Go
 
-1. **Initialization**:
+```sh
+go run .
+```
 
-   - We start by initializing two pointers: `left` and `right`.
-   - `left` points to the first character of the input string `s`.
-   - `right` points to the last character of the input string `s`.
+### Java
 
-2. **Comparison Loop**:
+```sh
+javac Main.java && java Main
+```
 
-   - While `left` is less than `right`, we continue checking pairs of characters.
-   - The loop ensures that we compare characters from both ends of the string towards the middle.
+### Node.js
 
-3. **Character Comparison**:
+```sh
+node .\main.js
+```
 
-   - At each iteration, we compare the characters at indices `left` and `right`.
-   - If they are not equal, we know that the string is not a palindrome.
-   - In this case, we log a message indicating that the elements are different, and we return `false`.
+### Python
 
-4. **Pointer Movement**:
+```sh
+py .\main.py
+```
 
-   - After comparing the characters, we move `left` one step to the right (towards the end of the string).
-   - Similarly, we move `right` one step to the left (towards the beginning of the string).
+### TypeScript
 
-5. **Loop Continuation**:
+```sh
+ts-node .\main.ts
+```
 
-   - We repeat steps 3 and 4 until `left` is no longer less than `right`.
-   - If we find any mismatched characters, we exit the loop early.
+## Explanation of the Algorithm
 
-6. **Palindrome Check Result**:
+### 1. Initialization
 
-   - If we reach the middle of the string without finding any mismatches, we know that the string is a palindrome.
-   - In this case, we return `true`.
+We start by initializing two pointers:
 
-7. **Test Cases**:
-   - The `main()` function demonstrates the algorithm by applying it to several test cases.
-   - For each test case, it logs the input string, its length, and whether it is a palindrome.
+- `left` points to the first character of the input string `s`.
+- `right` points to the last character of the input string `s`.
 
-The algorithm efficiently checks whether a given string is a palindrome by comparing characters from both ends. Feel free to ask if you have any more questions! 😊
+This setup prepares us to compare characters from both ends of the string towards the middle.
+
+### 2. Comparison Loop
+
+We enter a `while` loop that continues as long as `left` is less than `right`. This loop allows us to compare characters in pairs, moving towards the center of the string.
+
+### 3. Character Comparison
+
+At each iteration:
+
+- We compare the characters at the `left` and `right` indices.
+- If the characters are not equal, it means the string is not a palindrome.
+- We log a message indicating the elements are different and return `false`.
+
+### 4. Pointer Movement
+
+After comparing the characters:
+
+- We increment the `left` pointer by one, moving it towards the end of the string.
+- We decrement the `right` pointer by one, moving it towards the beginning of the string.
+
+### 5. Loop Continuation
+
+Steps 3 and 4 are repeated until the `left` pointer is no longer less than the `right` pointer.
+
+- If a mismatch is found, the loop terminates early.
+- If no mismatches are found, the loop completes all iterations.
+
+### 6. Palindrome Check Result
+
+If we reach the middle of the string without finding any mismatches:
+
+- We log that the string is a palindrome.
+- We return `true`.
+
+### 7. Test Cases
+
+The `main()` function demonstrates the algorithm by applying it to several test cases. For each test case:
+
+- It logs the input string and its length.
+- It checks if the string is a palindrome using the `isPalindrome` function.
+- It logs whether the string is a palindrome.

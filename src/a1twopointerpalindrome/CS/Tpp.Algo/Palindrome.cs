@@ -20,8 +20,8 @@ public static class PalindromeChecker
                 return false;
             }
 
-            left++; // Heading towards the right
-            right--; // Heading towards the left
+            left++;
+            right--;
         }
 
         return true;
