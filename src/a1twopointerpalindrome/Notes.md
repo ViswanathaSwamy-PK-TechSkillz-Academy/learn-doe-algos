@@ -1,5 +1,16 @@
 # Palindrome Checking Algorithm using Two Pointers
 
+## Few Commands
+
+```powershell
+dotnet run
+
+go run .
+
+javac Main.java && java Main
+```
+
+
 1. **Initialization**:
     - We start by initializing two pointers: `left` and `right`.
     - `left` points to the first character of the input string `s`.

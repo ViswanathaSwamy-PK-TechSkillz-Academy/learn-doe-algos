@@ -396,4 +396,4 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
-src/A1TwoPointerPalindrome/Java/PalindromeChecker.class
+src/**/java/*.class
