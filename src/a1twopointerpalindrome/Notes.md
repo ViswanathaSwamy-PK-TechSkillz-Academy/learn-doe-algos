@@ -4,10 +4,10 @@
 
 ```powershell
 dotnet run
-
 go run .
-
 javac Main.java && java Main
+node .\main.js
+py .\main.py
 ```
 
 
