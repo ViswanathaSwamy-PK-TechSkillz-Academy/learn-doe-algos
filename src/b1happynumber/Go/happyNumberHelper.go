@@ -1,9 +1,6 @@
-package main
+// happyNumberHelper.go
 
-import (
-	"fmt"
-	"strings"
-)
+package main
 
 // Helper function that calculates the sum of squared digits.
 func sumOfSquaredDigits(number int) int {
@@ -29,19 +26,4 @@ func isHappyNumber(n int) bool {
 	}
 
 	return fast == 1
-}
-
-func main() {
-	inputs := []int{1, 5, 19, 25, 7}
-	for i, input := range inputs {
-		fmt.Printf("%d.\tInput Number: %d\n", i+1, input)
-
-		result := "False"
-		if isHappyNumber(input) {
-			result = "True"
-		}
-
-		fmt.Printf("\n\tIs it a happy number? %s\n", result)
-		fmt.Println("-" + strings.Repeat("-", 99))
-	}
 }
