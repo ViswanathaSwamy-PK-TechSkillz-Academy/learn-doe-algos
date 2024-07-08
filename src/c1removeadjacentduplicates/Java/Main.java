@@ -1,5 +1,3 @@
-package c1removeadjacentduplicates.Java;
-
 public class Main {
     public static void main(String[] args) {
         String[] inputs = {

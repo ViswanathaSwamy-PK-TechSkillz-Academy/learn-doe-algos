@@ -1,5 +1,3 @@
-package c1removeadjacentduplicates.Java;
-
 import java.util.Stack;
 
 public class RemoveDuplicatesHelper {
