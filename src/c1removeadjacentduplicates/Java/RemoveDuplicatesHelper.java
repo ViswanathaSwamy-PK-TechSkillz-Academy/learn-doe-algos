@@ -1,4 +1,4 @@
-package c1removeadjacentduplicates.Java;
+// package c1removeadjacentduplicates.Java;
 
 import java.util.Stack;
 
