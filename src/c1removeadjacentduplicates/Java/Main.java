@@ -3,11 +3,11 @@ package c1removeadjacentduplicates.Java;
 public class Main {
     public static void main(String[] args) {
         String[] inputs = {
-            "g",
-            "ggaabcdeb",
-            "abbddaccaaabcd",
-            "aannkwwwkkkwna",
-            "abbabccblkklu"
+                "g",
+                "ggaabcdeb",
+                "abbddaccaaabcd",
+                "aannkwwwkkkwna",
+                "abbabccblkklu"
         };
 
         for (int i = 0; i < inputs.length; i++) {
