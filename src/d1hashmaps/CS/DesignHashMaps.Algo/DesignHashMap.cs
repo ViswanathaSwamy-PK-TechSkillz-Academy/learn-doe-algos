@@ -44,7 +44,7 @@ public class DesignHashMap
     {
         for (int i = 0; i < buckets.Length; i++)
         {
-            if (buckets[i] != null)
+            if (buckets[i] != null && buckets[i].Count > 0)
             {
                 Console.Write($"Bucket {i}: ");
                 buckets[i].PrintPairs();

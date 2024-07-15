@@ -45,6 +45,9 @@ public class Bucket
         pairs.RemoveAll(pair => pair.Key == key);
     }
 
+    // Property to get the count of pairs in the bucket.
+    public int Count => pairs.Count;
+
     // PrintPairs prints the key-value pairs in the bucket.
     public void PrintPairs()
     {
