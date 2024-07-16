@@ -28,11 +28,10 @@ public class Bucket {
     }
 
     public void remove(int key) {
-        for (int i = 0; i < pairs.size(); i++) {
-            if (pairs.get(i).key == key) {
-                pairs.remove(i);
-                return;
-            }
-        }
+        pairs.removeIf(pair -> pair.key == key);
+    }
+
+    public List<Pair> getPairs() {
+        return pairs;
     }
 }

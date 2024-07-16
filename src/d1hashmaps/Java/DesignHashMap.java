@@ -31,7 +31,7 @@ public class DesignHashMap {
     // For printing the current state of the hash map
     public void printHashMap() {
         for (int i = 0; i < buckets.size(); i++) {
-            List<Pair> pairs = buckets.get(i).pairs;
+            List<Pair> pairs = buckets.get(i).getPairs();
             if (pairs.size() > 0) {
                 System.out.print("Bucket " + i + ": ");
                 for (Pair pair : pairs) {

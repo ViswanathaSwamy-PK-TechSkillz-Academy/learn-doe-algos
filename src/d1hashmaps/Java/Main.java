@@ -1,13 +1,14 @@
 public class Main {
     public static void main(String[] args) {
         DesignHashMap hashMap = new DesignHashMap();
-        int[] keys = {5, 2069, 2070, 2073, 4138, 2068};
-        int[] values = {100, 200, 400, 500, 1000, 5000};
-        String[] operations = {"Get", "Get", "Put", "Get", "Put", "Get", "Get", "Remove", "Get", "Get", "Remove", "Get"};
+        int[] keys = { 5, 2069, 2070, 2073, 4138, 2068 };
+        int[] values = { 100, 200, 400, 500, 1000, 5000 };
+        String[] operations = { "Get", "Get", "Put", "Get", "Put", "Get", "Get", "Remove", "Get", "Get", "Remove",
+                "Get" };
         int[][] operationKeys = {
-            {5}, {2073}, {2073, 250}, {2073},
-            {121, 110}, {121}, {2068}, {2069}, {2069},
-            {2071}, {2071}, {2071},
+                { 5 }, { 2073 }, { 2073, 250 }, { 2073 },
+                { 121, 110 }, { 121 }, { 2068 }, { 2069 }, { 2069 },
+                { 2071 }, { 2071 }, { 2071 },
         };
 
         // Initialize the hash map with initial keys and values
