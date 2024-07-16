@@ -1,11 +1,5 @@
 package main
 
-// Pair represents a key-value pair.
-type Pair struct {
-	key   int
-	value int
-}
-
 // Bucket represents a bucket for storing key-value pairs.
 type Bucket struct {
 	pairs []Pair // Slice to store key-value pairs
