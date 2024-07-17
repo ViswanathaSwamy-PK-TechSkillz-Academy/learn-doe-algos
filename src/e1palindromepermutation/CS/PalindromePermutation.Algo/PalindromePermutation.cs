@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace PalindromePermutation.Algo;
 
-public static class PalindromePermutation
+public static class PalinPermutation
 {
     public static bool CanPermutePalindrome(string s)
     {
