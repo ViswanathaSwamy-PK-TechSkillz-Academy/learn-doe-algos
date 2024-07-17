@@ -53,7 +53,7 @@ public class Bucket
     {
         foreach (var pair in pairs)
         {
-            Console.Write($"{{key: {pair.Key}, value: {pair.Value}}} ");
+            Write($"{{key: {pair.Key}, value: {pair.Value}}} ");
         }
     }
 }
