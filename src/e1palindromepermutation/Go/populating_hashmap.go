@@ -1,4 +1,4 @@
-// algo.go
+// populating_hashmap.go
 package main
 
 // Hashmap struct to track character counts
@@ -8,11 +8,7 @@ type Hashmap struct {
 
 // Insert method to add characters to the hashmap
 func (hm *Hashmap) Insert(x rune) {
-	if _, ok := hm.hashmap[x]; ok {
-		hm.hashmap[x]++
-	} else {
-		hm.hashmap[x] = 1
-	}
+	hm.hashmap[x]++
 }
 
 // Function to check if a string can be permuted to form a palindrome
