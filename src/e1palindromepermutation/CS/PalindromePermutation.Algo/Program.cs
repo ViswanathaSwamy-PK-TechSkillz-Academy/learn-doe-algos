@@ -6,5 +6,5 @@
 
 foreach (var testCase in testCases)
 {
-    Console.WriteLine($"Can \"{testCase}\" form a palindrome permutation? {PalindromePermutation.CanPermutePalindrome(testCase)}");
+    WriteLine($"Can \"{testCase}\" form a palindrome permutation? {PalindromePermutation.CanPermutePalindrome(testCase)}");
 }

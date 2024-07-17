@@ -48,7 +48,7 @@ public class DesignHashMap
             {
                 Console.Write($"Bucket {i}: ");
                 buckets[i].PrintPairs();
-                Console.WriteLine();
+                WriteLine();
             }
         }
     }
