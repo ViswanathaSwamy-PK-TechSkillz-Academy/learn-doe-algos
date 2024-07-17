@@ -98,3 +98,60 @@ func main() {
 - The `populating_hashmap.go` file defines the `Hashmap` struct and its `Insert` method to keep track of character counts.
 - The `main.go` file defines the `permutePalindrome` function to check if a string can be permuted to form a palindrome by using the `Hashmap` to count characters and determine if at most one character has an odd count.
 - The `main` function in `main.go` tests the `permutePalindrome` function with various test cases and prints the results.
+
+
+To determine if a given string is a permutation of a palindrome, we need to check if the string can be rearranged to form a palindrome. A palindrome reads the same forwards and backwards. For a string to be a permutation of a palindrome, it must satisfy specific character frequency criteria:
+
+1. For strings of even length, all characters must occur an even number of times.
+2. For strings of odd length, exactly one character must occur an odd number of times, while all other characters must occur an even number of times.
+
+Here's how we can approach this problem using a hash table (or a dictionary in Python) to track character frequencies:
+
+### Steps:
+
+1. **Create a frequency dictionary**: Iterate through the string and count the frequency of each character.
+2. **Count odd frequencies**: Iterate through the frequency dictionary and count how many characters have an odd frequency.
+3. **Check the condition**: If the count of characters with an odd frequency is greater than one, the string cannot be a permutation of a palindrome.
+
+### Implementation in Python:
+
+```python
+def can_permute_palindrome(s: str) -> bool:
+    # Create a dictionary to count character frequencies
+    char_count = {}
+    
+    # Count the frequency of each character
+    for char in s:
+        if char != ' ':  # Ignore spaces
+            char = char.lower()  # Ignore case
+            char_count[char] = char_count.get(char, 0) + 1
+    
+    # Count how many characters have an odd frequency
+    odd_count = 0
+    for count in char_count.values():
+        if count % 2 != 0:
+            odd_count += 1
+    
+    # For the string to be a permutation of a palindrome
+    # there must be at most one character with an odd frequency
+    return odd_count <= 1
+
+# Example usage
+example_string = "Tact Coa"  # "Taco cat", "atco cta", etc.
+print(can_permute_palindrome(example_string))  # Output: True
+```
+
+### Explanation:
+
+- **Step 1**: We create a dictionary `char_count` to store the frequency of each character.
+- **Step 2**: We iterate through the string, ignoring spaces and considering characters in a case-insensitive manner. We update the frequency of each character in the dictionary.
+- **Step 3**: We count how many characters have an odd frequency by iterating through the values in the dictionary.
+- **Step 4**: We check if the count of odd frequencies is less than or equal to one. If true, the string can be permuted to form a palindrome.
+
+### Edge Cases:
+
+- **Empty String**: An empty string is trivially a permutation of a palindrome.
+- **Single Character**: A single character is a palindrome by itself.
+- **Spaces and Case Sensitivity**: Ignore spaces and treat characters case-insensitively.
+
+This approach efficiently checks the conditions for a string to be a permutation of a palindrome by leveraging a hash table to track character frequencies.
