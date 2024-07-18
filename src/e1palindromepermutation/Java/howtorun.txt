@@ -1,0 +1,8 @@
+Compile
+-----------
+$files = Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullName }
+javac $files
+
+Execute
+--------
+java com.example.main.Main
