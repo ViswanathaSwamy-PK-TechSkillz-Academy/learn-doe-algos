@@ -24,21 +24,21 @@ for (int i = 0; i < operations.Length; i++)
     switch (operations[i])
     {
         case "Put":
-            Console.WriteLine($"{i + 1}.\tPut({operationKeys[i][0]}, {operationKeys[i][1]})");
+            WriteLine($"{i + 1}.\tPut({operationKeys[i][0]}, {operationKeys[i][1]})");
             hashMap.Put(operationKeys[i][0], operationKeys[i][1]);
             break;
         case "Get":
-            Console.WriteLine($"{i + 1}.\tGet({operationKeys[i][0]})");
-            Console.WriteLine($"\tValue returned: {hashMap.Get(operationKeys[i][0])}");
+            WriteLine($"{i + 1}.\tGet({operationKeys[i][0]})");
+            WriteLine($"\tValue returned: {hashMap.Get(operationKeys[i][0])}");
             break;
         case "Remove":
-            Console.WriteLine($"{i + 1}.\tRemove({operationKeys[i][0]})");
+            WriteLine($"{i + 1}.\tRemove({operationKeys[i][0]})");
             hashMap.Remove(operationKeys[i][0]);
             break;
     }
 
     // Print the current state of the hash map
-    Console.WriteLine("\nCurrent Hash Map:");
+    WriteLine("\nCurrent Hash Map:");
     hashMap.PrintHashMap();
-    Console.WriteLine(new string('-', 100));
+    WriteLine(new string('-', 100));
 }

@@ -34,4 +34,4 @@
 int[] numbers = [1, 4, 2, 7, 5, 3];
 int target = 10;
 
-Console.WriteLine("Sum of Three Numbers: " + FindSumOfThree(numbers, target)); // Output: True
+WriteLine("Sum of Three Numbers: " + FindSumOfThree(numbers, target)); // Output: True
