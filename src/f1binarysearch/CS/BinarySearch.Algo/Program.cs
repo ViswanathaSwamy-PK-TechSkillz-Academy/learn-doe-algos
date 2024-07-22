@@ -1,4 +1,4 @@
-﻿using CS.BinarySearch.Algo;
+﻿using CSBinarySearch.Algo;
 
 var numsLists = new[]
 {

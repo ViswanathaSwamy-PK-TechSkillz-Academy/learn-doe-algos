@@ -1,4 +1,4 @@
-namespace CS.BinarySearch.Algo;
+namespace CSBinarySearch.Algo;
 
 public static class BinarySearch
 {
