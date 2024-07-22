@@ -1,6 +1,6 @@
-package f1binarysearch.Java.com.example.main;
+package com.example.main;
 
-import f1binarysearch.Java.com.example.jbinarysearch.BinarySearch;
+import com.example.jbinarysearch.BinarySearch;
 
 public class Main {
     public static void main(String[] args) {

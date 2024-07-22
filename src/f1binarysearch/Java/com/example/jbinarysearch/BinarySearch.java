@@ -1,4 +1,4 @@
-package f1binarysearch.Java.com.example.jbinarysearch;
+package com.example.jbinarysearch;
 
 public class BinarySearch {
     // Performs a binary search on a sorted array of integers.
