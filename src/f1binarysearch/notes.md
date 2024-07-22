@@ -4,6 +4,7 @@
 
 ```powershell
 dotnet new console -o BinarySearch.Algo --dry-run
+dotnet run --project .\BinarySearch.Algo\BinarySearch.Algo.csproj
 ```
 
 ### binary_search.go
