@@ -1,5 +1,12 @@
 # Binary Search
 
+## Few Commands
+
+```powershell
+dotnet new console -o BinarySearch.Algo --dry-run
+dotnet run --project .\BinarySearch.Algo\BinarySearch.Algo.csproj
+```
+
 ### binary_search.go
 
 This file defines the `binarySearch` function which performs a binary search on a sorted slice of integers.
