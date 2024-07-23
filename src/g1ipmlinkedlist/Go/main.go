@@ -5,20 +5,6 @@ import (
 	"strings"
 )
 
-func reverse(head *LinkedListNode) *LinkedListNode {
-	var prev, next *LinkedListNode
-	current := head
-
-	for current != nil {
-		next = current.next
-		current.next = prev
-		prev = current
-		current = next
-	}
-
-	return prev
-}
-
 func main() {
 	input := [][]int{
 		{1, 2, 3, 4, 5},
