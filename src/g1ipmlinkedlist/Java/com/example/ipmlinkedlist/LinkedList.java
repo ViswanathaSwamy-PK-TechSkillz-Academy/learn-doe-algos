@@ -1,9 +1,8 @@
 // File: LinkedList.java
-
 package com.example.ipmlinkedlist;
 
 public class LinkedList {
-    LinkedListNode head;
+    private LinkedListNode head;
 
     public void insertNodeAtHead(LinkedListNode node) {
         if (head == null) {
@@ -32,6 +31,10 @@ public class LinkedList {
             }
         }
         System.out.println("]");
+    }
+
+    public LinkedListNode getHead() {
+        return head;
     }
 
     public static LinkedListNode reverse(LinkedListNode head) {

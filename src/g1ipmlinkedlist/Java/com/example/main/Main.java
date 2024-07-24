@@ -17,9 +17,9 @@ public class Main {
             LinkedList linkedList = new LinkedList();
             linkedList.createLinkedList(input[i]);
             System.out.print((i + 1) + ". \tInput linked list: ");
-            DisplayLinkedList.displayWithForwardArrow(linkedList.head);
+            DisplayLinkedList.displayWithForwardArrow(linkedList.getHead());
             System.out.print("\tReversed linked list: ");
-            DisplayLinkedList.displayWithForwardArrow(LinkedList.reverse(linkedList.head));
+            DisplayLinkedList.displayWithForwardArrow(LinkedList.reverse(linkedList.getHead()));
             System.out.println(new String(new char[100]).replace('\0', '-'));
         }
     }

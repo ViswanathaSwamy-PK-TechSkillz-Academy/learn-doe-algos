@@ -1,8 +1,8 @@
 Compile
 -----------
-D:\TSA\learn-doe-algos\src\f1binarysearch\Java> $files = Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullName }
-D:\TSA\learn-doe-algos\src\f1binarysearch\Java> javac $files
+D:\TSA\learn-doe-algos\src\g1ipmlinkedlist\Java> $files = Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullName }
+D:\TSA\learn-doe-algos\src\g1ipmlinkedlist\Java> javac $files
 
 Execute
 --------
-D:\TSA\learn-doe-algos\src\f1binarysearch\Java> java com.example.main.Main
+D:\TSA\learn-doe-algos\src\g1ipmlinkedlist\Java> java com.example.main.Main
