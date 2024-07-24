@@ -5,10 +5,8 @@ import (
 )
 
 /*
-	DisplayLinkedListWithForwardArrow method will display the linked list
-
-not in the form of an array, but rather a list with arrows pointing to
-the next element
+DisplayLinkedListWithForwardArrow method will display the linked list not in the form of an array, but rather a list with
+arrows pointing to the next element
 */
 func DisplayLinkedListWithForwardArrow(l *LinkedListNode) {
 	temp := l
