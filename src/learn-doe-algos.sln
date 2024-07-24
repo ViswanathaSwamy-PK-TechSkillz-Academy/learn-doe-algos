@@ -19,6 +19,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "d1hashmaps", "d1hashmaps", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignHashMaps.Algo", "d1hashmaps\CS\DesignHashMaps.Algo\DesignHashMaps.Algo.csproj", "{5CBB32DA-A666-4FC1-8C2A-1083C9FED09E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "e1palindromepermutation", "e1palindromepermutation", "{41067554-B011-4FD7-B5BC-098E54C903AA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PalindromePermutation.Algo", "e1palindromepermutation\CS\PalindromePermutation.Algo\PalindromePermutation.Algo.csproj", "{62E3258C-BFCB-47D0-B7B7-2C69BE870617}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "f1binarysearch", "f1binarysearch", "{4BFAC36B-ECE9-405E-B20B-767FB833AB30}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinarySearch.Algo", "f1binarysearch\CS\BinarySearch.Algo\BinarySearch.Algo.csproj", "{2FD1966E-4ACD-4F91-BBDF-5454D3DB388C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "g1ipmlinkedlist", "g1ipmlinkedlist", "{826F7BF4-FAAA-4F6F-AC08-52F0D2AEF9AE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPMLinkedList.Algo", "g1ipmlinkedlist\CS\IPMLinkedList.Algo\IPMLinkedList.Algo.csproj", "{C8C69A18-3685-482A-B722-855AD8D8C779}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +53,18 @@ Global
 		{5CBB32DA-A666-4FC1-8C2A-1083C9FED09E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CBB32DA-A666-4FC1-8C2A-1083C9FED09E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CBB32DA-A666-4FC1-8C2A-1083C9FED09E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62E3258C-BFCB-47D0-B7B7-2C69BE870617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E3258C-BFCB-47D0-B7B7-2C69BE870617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E3258C-BFCB-47D0-B7B7-2C69BE870617}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E3258C-BFCB-47D0-B7B7-2C69BE870617}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FD1966E-4ACD-4F91-BBDF-5454D3DB388C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FD1966E-4ACD-4F91-BBDF-5454D3DB388C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FD1966E-4ACD-4F91-BBDF-5454D3DB388C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FD1966E-4ACD-4F91-BBDF-5454D3DB388C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8C69A18-3685-482A-B722-855AD8D8C779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8C69A18-3685-482A-B722-855AD8D8C779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8C69A18-3685-482A-B722-855AD8D8C779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8C69A18-3685-482A-B722-855AD8D8C779}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +74,9 @@ Global
 		{91E9AC2E-DDAC-4F0B-8ABD-963F78D48F78} = {5968462E-3708-41E8-9903-F74F8F3A40EF}
 		{4E8B7D66-C9CA-4494-AD4C-FA4B4ADE01B2} = {41F36B88-B267-49F1-843F-D1369C3A1564}
 		{5CBB32DA-A666-4FC1-8C2A-1083C9FED09E} = {81FB3B0C-450C-44A5-9523-6C33CCE25C9A}
+		{62E3258C-BFCB-47D0-B7B7-2C69BE870617} = {41067554-B011-4FD7-B5BC-098E54C903AA}
+		{2FD1966E-4ACD-4F91-BBDF-5454D3DB388C} = {4BFAC36B-ECE9-405E-B20B-767FB833AB30}
+		{C8C69A18-3685-482A-B722-855AD8D8C779} = {826F7BF4-FAAA-4F6F-AC08-52F0D2AEF9AE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF324E27-125F-41CE-92E5-393C4295713D}
