@@ -1,4 +1,5 @@
-﻿
+﻿using IPMLinkedList.Algo;
+
 var input = new[]
         {
             new[] { 1, 2, 3, 4, 5 },
@@ -12,9 +13,12 @@ for (int i = 0; i < input.Length; i++)
 {
     var linkedList = new LinkedList();
     linkedList.CreateLinkedList(input[i]);
-    Console.Write($"{i + 1}. \tInput linked list: ");
+
+    Write($"{i + 1}. \tInput linked list: ");
     DisplayLinkedList.DisplayWithForwardArrow(linkedList.Head);
-    Console.Write("\tReversed linked list: ");
+
+    Write("\tReversed linked list: ");
     DisplayLinkedList.DisplayWithForwardArrow(LinkedList.Reverse(linkedList.Head));
-    Console.WriteLine(new string('-', 100));
+
+    WriteLine(new string('-', 100));
 }

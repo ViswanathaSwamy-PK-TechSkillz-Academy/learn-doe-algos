@@ -7,17 +7,17 @@ public static class DisplayLinkedList
         var temp = head;
         while (temp != null)
         {
-            Console.Write(temp.Data);
+            Write(temp.Data);
             temp = temp.Next;
             if (temp != null)
             {
-                Console.Write(" → ");
+                Write(" → ");
             }
             else
             {
-                Console.Write(" → null");
+                Write(" → null");
             }
         }
-        Console.WriteLine();
+        WriteLine();
     }
 }

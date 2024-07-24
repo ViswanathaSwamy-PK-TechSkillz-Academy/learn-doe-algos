@@ -29,17 +29,17 @@ public class LinkedList
     public void DisplayLinkedList()
     {
         var temp = Head;
-        Console.Write("[");
+        Write("[");
         while (temp != null)
         {
-            Console.Write(temp.Data);
+            Write(temp.Data);
             temp = temp.Next;
             if (temp != null)
             {
-                Console.Write(", ");
+                Write(", ");
             }
         }
-        Console.WriteLine("]");
+        WriteLine("]");
     }
 
     public static LinkedListNode? Reverse(LinkedListNode? head)
