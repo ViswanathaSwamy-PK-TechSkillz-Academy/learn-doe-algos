@@ -1,7 +1,7 @@
 # tree_node.py
 
 class TreeNode:
-    def __init__(self, value=0, left=None, right=None):
-        self.value = value
-        self.left = left
-        self.right = right
+    def __init__(self, data):
+        self.data = data
+        self.left = None
+        self.right = None
