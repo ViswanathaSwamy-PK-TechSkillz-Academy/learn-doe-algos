@@ -2,6 +2,14 @@
 
 Sure, Swamy! Let's break down the problem and create a Go implementation for calculating the diameter of a binary tree using DFS. We will structure the code across multiple files for better organization.
 
+## Few Commands
+
+```powershell
+npm install -g typescript
+tsc --init
+
+```
+
 ## Implementation
 
 ### File Structure
