@@ -21,7 +21,7 @@ public class BinaryTree<T>
 
         var root = listOfNodes[0];
         var queue = new Queue<TreeNode<T>>();
-        queue.Enqueue(root);
+        queue.Enqueue(root!);
 
         int i = 1;
         while (i < listOfNodes.Count)
@@ -31,14 +31,14 @@ public class BinaryTree<T>
             if (i < listOfNodes.Count && listOfNodes[i] != null)
             {
                 current.Left = listOfNodes[i];
-                queue.Enqueue(current.Left);
+                queue.Enqueue(current.Left!);
             }
             i++;
 
             if (i < listOfNodes.Count && listOfNodes[i] != null)
             {
                 current.Right = listOfNodes[i];
-                queue.Enqueue(current.Right);
+                queue.Enqueue(current.Right!);
             }
             i++;
         }
