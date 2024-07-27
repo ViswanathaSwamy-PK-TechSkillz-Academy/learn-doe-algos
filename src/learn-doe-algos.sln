@@ -31,6 +31,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "g1ipmlinkedlist", "g1ipmlin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPMLinkedList.Algo", "g1ipmlinkedlist\CS\IPMLinkedList.Algo\IPMLinkedList.Algo.csproj", "{C8C69A18-3685-482A-B722-855AD8D8C779}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "h1tdfsdiameter", "h1tdfsdiameter", "{501237B7-6C33-41BD-AE82-328347080980}"
+	ProjectSection(SolutionItems) = preProject
+		h1tdfsdiameter\CS\TDFSDiameter.Algo\TDFSDiameter.Algo.csproj = h1tdfsdiameter\CS\TDFSDiameter.Algo\TDFSDiameter.Algo.csproj
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
