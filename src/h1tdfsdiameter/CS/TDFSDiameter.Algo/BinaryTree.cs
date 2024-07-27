@@ -7,14 +7,14 @@ public class BinaryTree<T>
 {
     public TreeNode<T>? Root { get; private set; }
 
-    public BinaryTree(List<TreeNode<T>> listOfNodes)
+    public BinaryTree(List<TreeNode<T>?> listOfNodes)
     {
         Root = CreateBinaryTree(listOfNodes);
     }
 
-    private TreeNode<T>? CreateBinaryTree(List<TreeNode<T>> listOfNodes)
+    private TreeNode<T>? CreateBinaryTree(List<TreeNode<T>?> listOfNodes)
     {
-        if (listOfNodes == null || listOfNodes.Count == 0)
+        if (listOfNodes == null || listOfNodes.Count == 0 || listOfNodes[0] == null)
         {
             return null;
         }
@@ -46,7 +46,7 @@ public class BinaryTree<T>
         return root;
     }
 
-    private int DiameterHelper(TreeNode<T> node, ref int diameter)
+    private int DiameterHelper(TreeNode<T>? node, ref int diameter)
     {
         if (node == null)
         {
@@ -64,7 +64,10 @@ public class BinaryTree<T>
     public int DiameterOfBinaryTree()
     {
         int diameter = 0;
-        DiameterHelper(Root, ref diameter);
+        if (Root != null)
+        {
+            DiameterHelper(Root, ref diameter);
+        }
         return diameter;
     }
 }
