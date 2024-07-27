@@ -5,14 +5,14 @@ using System.Collections.Generic;
 
 public class BinaryTree<T>
 {
-    public TreeNode<T> Root { get; private set; }
+    public TreeNode<T>? Root { get; private set; }
 
     public BinaryTree(List<TreeNode<T>> listOfNodes)
     {
         Root = CreateBinaryTree(listOfNodes);
     }
 
-    private TreeNode<T> CreateBinaryTree(List<TreeNode<T>> listOfNodes)
+    private TreeNode<T>? CreateBinaryTree(List<TreeNode<T>> listOfNodes)
     {
         if (listOfNodes == null || listOfNodes.Count == 0)
         {
