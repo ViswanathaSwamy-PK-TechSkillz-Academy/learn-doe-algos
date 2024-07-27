@@ -336,3 +336,168 @@ func InOrderTraversal(root *TreeNode) {
 ```
 
 This implementation covers the basic operations of a BST: insertion, searching, deletion, and in-order traversal. The code is structured into multiple files for better organization.
+
+
+Your Go code for defining and working with binary trees looks well-structured and clear. Here’s a brief explanation of the core components:
+
+### Core Components
+
+1. **TreeNode Structure**: 
+   ```go
+   package main
+
+   type TreeNode[T any] struct {
+       Data  T
+       Left  *TreeNode[T]
+       Right *TreeNode[T]
+   }
+   ```
+   This structure represents a node in the binary tree, with generic type `T`.
+
+2. **BinaryTree Structure**:
+   ```go
+   package main
+
+   type BinaryTree[T any] struct {
+       root *TreeNode[T]
+   }
+   ```
+   This structure represents the binary tree itself.
+
+3. **Creating a Binary Tree**:
+   ```go
+   func NewBinaryTree[T any](ListOfNodes []*TreeNode[T]) *BinaryTree[T] {
+       tree := &BinaryTree[T]{}
+       tree.root = tree.createBinaryTree(ListOfNodes)
+       return tree
+   }
+
+   func (tree *BinaryTree[T]) createBinaryTree(ListOfNodes []*TreeNode[T]) *TreeNode[T] {
+       if len(ListOfNodes) == 0 {
+           return nil
+       }
+
+       root := ListOfNodes[0]
+       queue := []*TreeNode[T]{root}
+
+       i := 1
+       for i < len(ListOfNodes) {
+           curr := queue[0]
+           queue = queue[1:]
+
+           if ListOfNodes[i] != nil {
+               curr.Left = ListOfNodes[i]
+               queue = append(queue, curr.Left)
+           }
+           i++
+
+           if i < len(ListOfNodes) && ListOfNodes[i] != nil {
+               curr.Right = ListOfNodes[i]
+               queue = append(queue, curr.Right)
+           }
+           i++
+       }
+
+       return root
+   }
+   ```
+   This function creates a binary tree from a list of nodes using a level-order insertion method.
+
+4. **Calculating the Diameter**:
+   ```go
+   func (tree *BinaryTree[T]) diameterHelper(node *TreeNode[T], diameter *int) int {
+       if node == nil {
+           return 0
+       }
+       lh := tree.diameterHelper(node.Left, diameter)
+       rh := tree.diameterHelper(node.Right, diameter)
+
+       *diameter = max(*diameter, lh+rh)
+       return max(lh, rh) + 1
+   }
+
+   func (tree *BinaryTree[T]) DiameterOfBinaryTree() int {
+       if tree.root == nil {
+           return 0
+       }
+       diameter := 0
+       tree.diameterHelper(tree.root, &diameter)
+       return diameter
+   }
+
+   func max(v1 int, v2 int) int {
+       if v1 > v2 {
+           return v1
+       }
+       return v2
+   }
+   ```
+   The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This code calculates the diameter by using a helper function to find the maximum depth of the left and right subtrees for each node and updating the diameter accordingly.
+
+5. **Main Function**:
+   ```go
+   package main
+
+   import (
+       "fmt"
+       "strings"
+   )
+
+   func displayTree[T any](root *TreeNode[T]) {
+       if root == nil {
+           return
+       }
+       queue := []*TreeNode[T]{root}
+       for len(queue) > 0 {
+           curr := queue[0]
+           queue = queue[1:]
+           fmt.Print(curr.Data, " ")
+           if curr.Left != nil {
+               queue = append(queue, curr.Left)
+           }
+           if curr.Right != nil {
+               queue = append(queue, curr.Right)
+           }
+       }
+       fmt.Println()
+   }
+
+   func main() {
+       listOfTrees := [][]*TreeNode[int]{
+           {&TreeNode[int]{Data: 2}, &TreeNode[int]{Data: 1}, &TreeNode[int]{Data: 4}, &TreeNode[int]{Data: 3}, &TreeNode[int]{Data: 5}, &TreeNode[int]{Data: 6}, &TreeNode[int]{Data: 7}},
+           {&TreeNode[int]{Data: 1}, &TreeNode[int]{Data: 2}, &TreeNode[int]{Data: 3}, &TreeNode[int]{Data: 4}, &TreeNode[int]{Data: 5}, &TreeNode[int]{Data: 6}, &TreeNode[int]{Data: 7}, &TreeNode[int]{Data: 8}, &TreeNode[int]{Data: 9}},
+           {&TreeNode[int]{Data: 45}, &TreeNode[int]{Data: 32}, &TreeNode[int]{Data: 23}, &TreeNode[int]{Data: 21}, &TreeNode[int]{Data: 19}, &TreeNode[int]{Data: 19}, &TreeNode[int]{Data: 18}, &TreeNode[int]{Data: 1}},
+           {&TreeNode[int]{Data: 5}, &TreeNode[int]{Data: 3}, &TreeNode[int]{Data: 4}, &TreeNode[int]{Data: 1}, &TreeNode[int]{Data: 2}, &TreeNode[int]{Data: 6}, &TreeNode[int]{Data: 7}, &TreeNode[int]{Data: 8}, &TreeNode[int]{Data: 9}},
+           {&TreeNode[int]{Data: 9}, &TreeNode[int]{Data: 7}, nil, nil, &TreeNode[int]{Data: 1}, &TreeNode[int]{Data: 8}, &TreeNode[int]{Data: 10}, nil, &TreeNode[int]{Data: 12}},
+       }
+
+       inputTrees := make([]*BinaryTree[int], len(listOfTrees))
+       for i, listOfNodes := range listOfTrees {
+           inputTrees[i] = NewBinaryTree(listOfNodes)
+       }
+
+       for i, tree := range inputTrees {
+           fmt.Printf("%d.\tOriginal tree:\n", i+1)
+           displayTree(tree.root)
+           fmt.Printf("\n\tDiameter of tree: %d\n", tree.DiameterOfBinaryTree())
+           fmt.Printf("%s\n", strings.Repeat("-", 100))
+       }
+   }
+   ```
+   The main function initializes several binary trees, displays each tree, and calculates and prints its diameter.
+
+### Points of Interest
+
+- **Generic Tree Nodes**: The use of generics (`T any`) allows the tree to store any data type.
+- **Level-Order Tree Construction**: The binary tree is constructed using a level-order insertion approach, which ensures a complete binary tree if all nodes are provided.
+- **Tree Traversal and Diameter Calculation**: The tree traversal (level-order) and diameter calculation (using a helper function) are efficient and clearly implemented.
+
+### Running the Code
+
+To run the code, ensure you have a working Go environment. Save the files with the appropriate names (`TreeNode.go`, `BinaryTree.go`, and `Main.go`) and run the `Main.go` file:
+
+```sh
+go run Main.go
+```
+
+This will output the original trees and their respective diameters, formatted as specified in your main function.

@@ -1,3 +1,5 @@
+// File: BinaryTree.go
+
 package main
 
 type BinaryTree[T any] struct {
