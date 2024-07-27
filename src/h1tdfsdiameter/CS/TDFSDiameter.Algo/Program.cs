@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-void DisplayTree<T>(TreeNode<T> root)
+void DisplayTree<T>(TreeNode<T>? root)
 {
     if (root == null) return;
 
@@ -13,7 +13,7 @@ void DisplayTree<T>(TreeNode<T> root)
     while (queue.Count > 0)
     {
         var current = queue.Dequeue();
-        Write($"{current.Data} ");
+        Console.Write($"{current.Data} ");
         if (current.Left != null)
         {
             queue.Enqueue(current.Left);
@@ -23,10 +23,10 @@ void DisplayTree<T>(TreeNode<T> root)
             queue.Enqueue(current.Right);
         }
     }
-    WriteLine();
+    Console.WriteLine();
 }
 
-var listOfTrees = new List<List<TreeNode<int>>>
+var listOfTrees = new List<List<TreeNode<int>?>>()
 {
     new() { new TreeNode<int>(2), new TreeNode<int>(1), new TreeNode<int>(4), new TreeNode<int>(3), new TreeNode<int>(5), new TreeNode<int>(6), new TreeNode<int>(7) },
     new() { new TreeNode<int>(1), new TreeNode<int>(2), new TreeNode<int>(3), new TreeNode<int>(4), new TreeNode<int>(5), new TreeNode<int>(6), new TreeNode<int>(7), new TreeNode<int>(8), new TreeNode<int>(9) },
@@ -43,8 +43,8 @@ foreach (var listOfNodes in listOfTrees)
 
 for (int i = 0; i < inputTrees.Count; i++)
 {
-    WriteLine($"{i + 1}.\tOriginal tree:");
+    Console.WriteLine($"{i + 1}.\tOriginal tree:");
     DisplayTree(inputTrees[i].Root);
-    WriteLine($"\n\tDiameter of tree: {inputTrees[i].DiameterOfBinaryTree()}");
-    WriteLine(new string('-', 100));
+    Console.WriteLine($"\n\tDiameter of tree: {inputTrees[i].DiameterOfBinaryTree()}");
+    Console.WriteLine(new string('-', 100));
 }
