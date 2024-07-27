@@ -32,9 +32,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IPMLinkedList.Algo", "g1ipmlinkedlist\CS\IPMLinkedList.Algo\IPMLinkedList.Algo.csproj", "{C8C69A18-3685-482A-B722-855AD8D8C779}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "h1tdfsdiameter", "h1tdfsdiameter", "{501237B7-6C33-41BD-AE82-328347080980}"
-	ProjectSection(SolutionItems) = preProject
-		h1tdfsdiameter\CS\TDFSDiameter.Algo\TDFSDiameter.Algo.csproj = h1tdfsdiameter\CS\TDFSDiameter.Algo\TDFSDiameter.Algo.csproj
-	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TDFSDiameter.Algo", "h1tdfsdiameter\CS\TDFSDiameter.Algo\TDFSDiameter.Algo.csproj", "{260A573F-4DF2-4BC1-A6E8-53E11E7627CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -70,6 +69,10 @@ Global
 		{C8C69A18-3685-482A-B722-855AD8D8C779}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8C69A18-3685-482A-B722-855AD8D8C779}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8C69A18-3685-482A-B722-855AD8D8C779}.Release|Any CPU.Build.0 = Release|Any CPU
+		{260A573F-4DF2-4BC1-A6E8-53E11E7627CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{260A573F-4DF2-4BC1-A6E8-53E11E7627CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{260A573F-4DF2-4BC1-A6E8-53E11E7627CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{260A573F-4DF2-4BC1-A6E8-53E11E7627CE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +85,7 @@ Global
 		{62E3258C-BFCB-47D0-B7B7-2C69BE870617} = {41067554-B011-4FD7-B5BC-098E54C903AA}
 		{2FD1966E-4ACD-4F91-BBDF-5454D3DB388C} = {4BFAC36B-ECE9-405E-B20B-767FB833AB30}
 		{C8C69A18-3685-482A-B722-855AD8D8C779} = {826F7BF4-FAAA-4F6F-AC08-52F0D2AEF9AE}
+		{260A573F-4DF2-4BC1-A6E8-53E11E7627CE} = {501237B7-6C33-41BD-AE82-328347080980}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF324E27-125F-41CE-92E5-393C4295713D}

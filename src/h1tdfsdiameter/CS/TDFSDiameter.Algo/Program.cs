@@ -1,8 +1,5 @@
 ﻿// File: Program.cs
 
-using System;
-using System.Collections.Generic;
-
 void DisplayTree<T>(TreeNode<T>? root)
 {
     if (root == null) return;
