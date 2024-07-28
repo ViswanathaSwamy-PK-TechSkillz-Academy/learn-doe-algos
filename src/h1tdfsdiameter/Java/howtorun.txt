@@ -1,0 +1,8 @@
+Compile
+-----------
+D:\TSA\learn-doe-algos\src\h1tdfsdiameter\Java> $files = Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullName }
+D:\TSA\learn-doe-algos\src\h1tdfsdiameter\Java> javac $files
+
+Execute
+--------
+D:\TSA\learn-doe-algos\src\h1tdfsdiameter\Java> java com.example.main.Main

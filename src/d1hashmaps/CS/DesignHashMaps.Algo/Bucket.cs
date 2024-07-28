@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace HashMapExample;
 
 // Bucket represents a bucket for storing key-value pairs.

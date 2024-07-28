@@ -1,6 +1,4 @@
 // PalindromePermutation.cs
-using System.Collections.Generic;
-
 namespace PalindromePermutation.Algo;
 
 public static class PalinPermutation

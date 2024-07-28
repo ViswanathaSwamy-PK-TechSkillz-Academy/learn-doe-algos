@@ -1,27 +1,24 @@
 // File: BinaryTree.cs
 
-using System;
-using System.Collections.Generic;
-
 public class BinaryTree<T>
 {
-    public TreeNode<T> Root { get; private set; }
+    public TreeNode<T>? Root { get; private set; }
 
-    public BinaryTree(List<TreeNode<T>> listOfNodes)
+    public BinaryTree(List<TreeNode<T>?> listOfNodes)
     {
         Root = CreateBinaryTree(listOfNodes);
     }
 
-    private TreeNode<T> CreateBinaryTree(List<TreeNode<T>> listOfNodes)
+    private TreeNode<T>? CreateBinaryTree(List<TreeNode<T>?> listOfNodes)
     {
-        if (listOfNodes == null || listOfNodes.Count == 0)
+        if (listOfNodes == null || listOfNodes.Count == 0 || listOfNodes[0] == null)
         {
             return null;
         }
 
         var root = listOfNodes[0];
         var queue = new Queue<TreeNode<T>>();
-        queue.Enqueue(root);
+        queue.Enqueue(root!);
 
         int i = 1;
         while (i < listOfNodes.Count)
@@ -31,14 +28,14 @@ public class BinaryTree<T>
             if (i < listOfNodes.Count && listOfNodes[i] != null)
             {
                 current.Left = listOfNodes[i];
-                queue.Enqueue(current.Left);
+                queue.Enqueue(current.Left!);
             }
             i++;
 
             if (i < listOfNodes.Count && listOfNodes[i] != null)
             {
                 current.Right = listOfNodes[i];
-                queue.Enqueue(current.Right);
+                queue.Enqueue(current.Right!);
             }
             i++;
         }
@@ -46,7 +43,7 @@ public class BinaryTree<T>
         return root;
     }
 
-    private int DiameterHelper(TreeNode<T> node, ref int diameter)
+    private int DiameterHelper(TreeNode<T>? node, ref int diameter)
     {
         if (node == null)
         {
@@ -64,7 +61,10 @@ public class BinaryTree<T>
     public int DiameterOfBinaryTree()
     {
         int diameter = 0;
-        DiameterHelper(Root, ref diameter);
+        if (Root != null)
+        {
+            DiameterHelper(Root, ref diameter);
+        }
         return diameter;
     }
 }

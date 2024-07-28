@@ -1,5 +1,3 @@
-using System;
-
 namespace HashMapExample;
 
 // DesignHashMap represents a hash map.

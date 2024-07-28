@@ -1,9 +1,6 @@
 ﻿// File: Program.cs
 
-using System;
-using System.Collections.Generic;
-
-void DisplayTree<T>(TreeNode<T> root)
+void DisplayTree<T>(TreeNode<T>? root)
 {
     if (root == null) return;
 
@@ -26,7 +23,7 @@ void DisplayTree<T>(TreeNode<T> root)
     Console.WriteLine();
 }
 
-var listOfTrees = new List<List<TreeNode<int>>>
+var listOfTrees = new List<List<TreeNode<int>?>>()
 {
     new() { new TreeNode<int>(2), new TreeNode<int>(1), new TreeNode<int>(4), new TreeNode<int>(3), new TreeNode<int>(5), new TreeNode<int>(6), new TreeNode<int>(7) },
     new() { new TreeNode<int>(1), new TreeNode<int>(2), new TreeNode<int>(3), new TreeNode<int>(4), new TreeNode<int>(5), new TreeNode<int>(6), new TreeNode<int>(7), new TreeNode<int>(8), new TreeNode<int>(9) },

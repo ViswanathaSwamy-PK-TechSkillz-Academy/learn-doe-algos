@@ -1,5 +1,4 @@
 ﻿using HashMapExample;
-using System;
 
 // Driver code
 var hashMap = new DesignHashMap();
