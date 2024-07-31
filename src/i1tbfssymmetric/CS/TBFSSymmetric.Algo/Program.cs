@@ -23,7 +23,7 @@ for (int i = 0; i < inputTrees.Count; i++)
 void DisplayTree(TreeNode<int>? root)
 {
     if (root == null) return;
-    Console.Write($"{root.Data} ");
+    Write($"{root.Data} ");
     DisplayTree(root.Left);
     DisplayTree(root.Right);
 }

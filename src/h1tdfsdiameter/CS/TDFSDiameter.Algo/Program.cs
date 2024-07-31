@@ -10,7 +10,7 @@ void DisplayTree<T>(TreeNode<T>? root)
     while (queue.Count > 0)
     {
         var current = queue.Dequeue();
-        Console.Write($"{current.Data} ");
+        Write($"{current.Data} ");
         if (current.Left != null)
         {
             queue.Enqueue(current.Left);
