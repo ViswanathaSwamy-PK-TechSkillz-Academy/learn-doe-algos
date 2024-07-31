@@ -1,6 +1,6 @@
 namespace BinarySearch.Algo;
 
-public static class BinarySearch
+public static class BiinarySearch
 {
     // Performs a binary search on a sorted array of integers.
     // Returns the index of the target if found, or -1 if the target is not in the array.
