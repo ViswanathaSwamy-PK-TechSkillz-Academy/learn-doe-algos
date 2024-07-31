@@ -1,4 +1,4 @@
-namespace HashMapExample;
+namespace DesignHashMaps.Algo;
 
 // Pair represents a key-value pair.
 public class Pair

@@ -1,6 +1,4 @@
-﻿using CSBinarySearch.Algo;
-
-var numsLists = new[]
+﻿var numsLists = new[]
 {
     new int[] {},
     new int[] {0, 1},

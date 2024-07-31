@@ -1,4 +1,4 @@
-namespace CSBinarySearch.Algo;
+namespace BinarySearch.Algo;
 
 public static class BinarySearch
 {
@@ -11,7 +11,7 @@ public static class BinarySearch
 
         while (low <= high)
         {
-            int mid = low + ((high - low) / 2);
+            int mid = low + (high - low) / 2;
             if (nums[mid] == target)
             {
                 return mid;
