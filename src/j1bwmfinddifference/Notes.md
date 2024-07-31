@@ -2,13 +2,6 @@
 
 ## Find the Difference
 
-To solve this problem using bitwise manipulation in Go, we'll use the XOR operation to identify the extra character. By XOR-ing all characters in both strings, we can isolate the extra character, because XOR-ing two identical characters results in 0, and XOR-ing 0 with any character results in the character itself.
-
-Here’s how you can organize the Go code into multiple files:
-
-1. **main.go**: This file will contain the main function that reads the input strings and calls the function to find the index of the extra character.
-2. **find_difference.go**: This file will contain the logic to find the extra character and its index.
-
 ### File: `main.go`
 
 ```go
@@ -16,16 +9,20 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func main() {
 	// Example input strings
-	str1 := "abcdefg"
-	str2 := "abcdefh"
+	string1List := []string{"wxyz", "cbda", "jlkmn", "courae", "hello"}
+	string2List := []string{"zwxgy", "abc", "klmn", "couearg", "helo"}
 
-	// Find the index of the extra character
-	index := FindDifferenceIndex(str1, str2)
-	fmt.Printf("The index of the extra character is: %d\n", index)
+	for i := 0; i < len(string1List); i++ {
+		fmt.Printf("%d.\tString 1 = %s\n", i+1, string1List[i])
+		fmt.Printf("\tString 2 = %s\n", string2List[i])
+		fmt.Printf("\n\tThe extra character is at index: %d\n", extraCharacterIndex(string1List[i], string2List[i]))
+		fmt.Printf("%s\n", strings.Repeat("-", 100))
+	}
 }
 ```
 
@@ -34,32 +31,35 @@ func main() {
 ```go
 package main
 
-// FindDifferenceIndex finds the index of the extra character that is present in only one of the strings.
+import (
+	"strings"
+)
+
+// extraCharacterIndex finds the index of the extra character that is present in only one of the strings.
 // It assumes that one string has exactly one extra character compared to the other.
-func FindDifferenceIndex(str1, str2 string) int {
-	longer, shorter := str1, str2
-	if len(str2) > len(str1) {
-		longer, shorter = str2, str1
+func extraCharacterIndex(str1, str2 string) int {
+	result := 0
+	str1Length := len(str1)
+	str2Length := len(str2)
+
+	// XOR all characters in str1
+	for i := 0; i < str1Length; i++ {
+		result ^= int(str1[i])
 	}
 
-	// XOR all characters in both strings to find the extra character
-	var extraChar byte
-	for i := range longer {
-		if i < len(shorter) {
-			extraChar ^= longer[i] ^ shorter[i]
-		} else {
-			extraChar ^= longer[i]
-		}
+	// XOR all characters in str2
+	for i := 0; i < str2Length; i++ {
+		result ^= int(str2[i])
 	}
 
-	// Find the index of the extra character in the longer string
-	for i := range longer {
-		if longer[i] == extraChar {
-			return i
-		}
+	// Determine the longer string and find the index of the extra character
+	if str1Length > str2Length {
+		index := strings.Index(str1, string(result))
+		return index
+	} else {
+		index := strings.Index(str2, string(result))
+		return index
 	}
-
-	return -1 // This should never happen if the input is as expected
 }
 ```
 
@@ -67,12 +67,13 @@ func FindDifferenceIndex(str1, str2 string) int {
 
 1. **main.go**:
 
-   - The `main` function initializes two example strings (`str1` and `str2`).
-   - It calls the `FindDifferenceIndex` function with these strings and prints the result.
+   - Contains the `main` function that initializes lists of string pairs.
+   - Iterates over these lists, calling the `extraCharacterIndex` function for each pair.
+   - Prints the strings and the index of the extra character.
 
 2. **find_difference.go**:
-   - The `FindDifferenceIndex` function first determines which string is longer.
-   - It then uses the XOR operation to find the extra character.
-   - Finally, it iterates through the longer string to find and return the index of the extra character.
+   - Contains the `extraCharacterIndex` function which uses XOR to find the extra character.
+   - It iterates through both strings, XOR-ing all characters.
+   - It then determines which string is longer and finds the index of the extra character in that string using `strings.Index`.
 
-This implementation assumes that one string has exactly one extra character compared to the other, as stated in the problem. If the input guarantees are different, additional error handling might be necessary.
+This structure separates the main logic from the function, making the code cleaner and more modular. You can now compile and run these files together to see the result.
