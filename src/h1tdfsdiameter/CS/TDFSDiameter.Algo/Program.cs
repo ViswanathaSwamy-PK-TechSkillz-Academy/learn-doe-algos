@@ -20,7 +20,7 @@ void DisplayTree<T>(TreeNode<T>? root)
             queue.Enqueue(current.Right);
         }
     }
-    Console.WriteLine();
+    WriteLine();
 }
 
 var listOfTrees = new List<List<TreeNode<int>?>>()
@@ -40,8 +40,8 @@ foreach (var listOfNodes in listOfTrees)
 
 for (int i = 0; i < inputTrees.Count; i++)
 {
-    Console.WriteLine($"{i + 1}.\tOriginal tree:");
+    WriteLine($"{i + 1}.\tOriginal tree:");
     DisplayTree(inputTrees[i].Root);
-    Console.WriteLine($"\n\tDiameter of tree: {inputTrees[i].DiameterOfBinaryTree()}");
-    Console.WriteLine(new string('-', 100));
+    WriteLine($"\n\tDiameter of tree: {inputTrees[i].DiameterOfBinaryTree()}");
+    WriteLine(new string('-', 100));
 }

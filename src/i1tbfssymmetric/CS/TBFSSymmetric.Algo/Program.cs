@@ -14,10 +14,10 @@ var inputTrees = inputTreesData.Select(treeData => new BinaryTree<int>(treeData)
 for (int i = 0; i < inputTrees.Count; i++)
 {
     var tree = inputTrees[i];
-    Console.WriteLine($"{i + 1} .\tInput Tree:");
+    WriteLine($"{i + 1} .\tInput Tree:");
     DisplayTree(tree.Root);
-    Console.WriteLine($"\n\tResult: {SymmetricTreeChecker.IsSymmetric(tree.Root)}");
-    Console.WriteLine(new string('-', 100));
+    WriteLine($"\n\tResult: {SymmetricTreeChecker.IsSymmetric(tree.Root)}");
+    WriteLine(new string('-', 100));
 }
 
 void DisplayTree(TreeNode<int>? root)
