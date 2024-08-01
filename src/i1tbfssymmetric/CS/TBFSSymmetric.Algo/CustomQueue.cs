@@ -1,5 +1,7 @@
 // File: CustomQueue.cs
 
+using System.Text;
+
 namespace TBFSSymmetric.Algo;
 
 public class CustomQueue<T>
@@ -58,12 +60,12 @@ public class CustomQueue<T>
         }
 
         QueueNode<T>? temp = _head;
-        string? outStr = "[";
+        StringBuilder? outStr = new("[");
         while (temp != null)
         {
-            outStr += $"{temp.Value}, ";
+            outStr.Append(temp.Value).Append(", ");
             temp = temp.Next;
         }
-        return outStr.TrimEnd(',', ' ') + "]";
+        return outStr.ToString().TrimEnd(',', ' ') + "]";
     }
 }
