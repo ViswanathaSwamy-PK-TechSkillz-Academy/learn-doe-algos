@@ -1,3 +1,5 @@
+// File: CustomQueue.cs
+
 namespace TBFSSymmetric.Algo;
 
 public class CustomQueue<T>

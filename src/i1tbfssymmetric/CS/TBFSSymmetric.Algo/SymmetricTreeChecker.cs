@@ -1,3 +1,5 @@
+// File: SymmetricTreeChecker.cs
+
 namespace TBFSSymmetric.Algo;
 
 public static class SymmetricTreeChecker

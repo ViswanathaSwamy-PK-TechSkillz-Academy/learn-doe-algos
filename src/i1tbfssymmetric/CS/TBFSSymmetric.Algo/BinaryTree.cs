@@ -1,3 +1,5 @@
+// File: BinaryTree.cs
+
 namespace TBFSSymmetric.Algo;
 
 public class BinaryTree<T>(List<TreeNode<T>?> listOfNodes)

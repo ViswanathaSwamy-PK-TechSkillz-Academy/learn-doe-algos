@@ -1,3 +1,5 @@
+// File: TreeNode.cs
+
 namespace TBFSSymmetric.Algo;
 
 public class TreeNode<T>(T data)

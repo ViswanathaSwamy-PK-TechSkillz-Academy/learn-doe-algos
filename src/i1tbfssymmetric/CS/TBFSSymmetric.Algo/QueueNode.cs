@@ -1,3 +1,5 @@
+// File: QueueNode.cs
+
 namespace TBFSSymmetric.Algo;
 
 public class QueueNode<T>(T value)
