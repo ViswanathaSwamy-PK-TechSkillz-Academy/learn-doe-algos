@@ -1,15 +1,10 @@
 namespace TBFSSymmetric.Algo;
 
-public class TreeNode<T>
+public class TreeNode<T>(T data)
 {
-    public T Data { get; set; }
-    public TreeNode<T>? Left { get; set; }
-    public TreeNode<T>? Right { get; set; }
+    public T Data { get; set; } = data;
 
-    public TreeNode(T data)
-    {
-        Data = data;
-        Left = null;
-        Right = null;
-    }
+    public TreeNode<T>? Left { get; set; } = null;
+
+    public TreeNode<T>? Right { get; set; } = null;
 }

@@ -1,26 +1,24 @@
 namespace TBFSSymmetric.Algo;
 
-public class BinaryTree<T>
+public class BinaryTree<T>(List<TreeNode<T>?> listOfNodes)
 {
-    public TreeNode<T>? Root { get; private set; }
+    public TreeNode<T>? Root { get; private set; } = BinaryTree<T>.CreateBinaryTree(listOfNodes);
 
-    public BinaryTree(List<TreeNode<T>?> listOfNodes)
+    private static TreeNode<T>? CreateBinaryTree(List<TreeNode<T>?> listOfNodes)
     {
-        Root = CreateBinaryTree(listOfNodes);
-    }
+        if (listOfNodes.Count == 0)
+        {
+            return null;
+        }
 
-    private TreeNode<T>? CreateBinaryTree(List<TreeNode<T>?> listOfNodes)
-    {
-        if (listOfNodes.Count == 0) return null;
-
-        var root = new TreeNode<T>(listOfNodes[0]!.Data);
-        var queue = new Queue<TreeNode<T>>();
+        TreeNode<T>? root = new(listOfNodes[0]!.Data);
+        Queue<TreeNode<T>>? queue = new();
         queue.Enqueue(root);
         int i = 1;
 
         while (i < listOfNodes.Count)
         {
-            var curr = queue.Dequeue();
+            TreeNode<T>? curr = queue.Dequeue();
 
             if (listOfNodes[i] != null)
             {
