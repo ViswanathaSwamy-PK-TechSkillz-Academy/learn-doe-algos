@@ -1,4 +1,4 @@
-namespace HashMapExample;
+namespace DesignHashMaps.Algo;
 
 // Bucket represents a bucket for storing key-value pairs.
 public class Bucket

@@ -1,15 +1,16 @@
-﻿using HashMapExample;
+﻿using DesignHashMaps.Algo;
 
 // Driver code
 var hashMap = new DesignHashMap();
-int[] keys = { 5, 2069, 2070, 2073, 4138, 2068 };
-int[] values = { 100, 200, 400, 500, 1000, 5000 };
-string[] operations = { "Get", "Get", "Put", "Get", "Put", "Get", "Get", "Remove", "Get", "Get", "Remove", "Get" };
-int[][] operationKeys = {
-    new int[] { 5 }, new int[] { 2073 }, new int[] { 2073, 250 }, new int[] { 2073 },
-    new int[] { 121, 110 }, new int[] { 121 }, new int[] { 2068 }, new int[] { 2069 }, new int[] { 2069 },
-    new int[] { 2071 }, new int[] { 2071 }, new int[] { 2071 }
-};
+
+int[] keys = [5, 2069, 2070, 2073, 4138, 2068];
+int[] values = [100, 200, 400, 500, 1000, 5000];
+string[] operations = ["Get", "Get", "Put", "Get", "Put", "Get", "Get", "Remove", "Get", "Get", "Remove", "Get"];
+int[][] operationKeys = [
+    [5], [2073], [2073, 250], [2073],
+    [121, 110], [121], [2068], [2069], [2069],
+    [2071], [2071], [2071]
+];
 
 // Initialize the hash map with initial keys and values
 for (int i = 0; i < keys.Length; i++)

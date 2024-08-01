@@ -1,4 +1,4 @@
-namespace HashMapExample;
+namespace DesignHashMaps.Algo;
 
 // DesignHashMap represents a hash map.
 public class DesignHashMap
@@ -44,7 +44,7 @@ public class DesignHashMap
         {
             if (buckets[i] != null && buckets[i].Count > 0)
             {
-                Console.Write($"Bucket {i}: ");
+                Write($"Bucket {i}: ");
                 buckets[i].PrintPairs();
                 WriteLine();
             }

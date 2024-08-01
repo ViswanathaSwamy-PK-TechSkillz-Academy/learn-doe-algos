@@ -1,4 +1,4 @@
-﻿using CSBinarySearch.Algo;
+﻿using BinarySearch.Algo;
 
 var numsLists = new[]
 {
@@ -15,7 +15,7 @@ for (int i = 0; i < numsLists.Length; i++)
 {
     var nums = numsLists[i];
     var target = targetList[i];
-    var index = BinarySearch.Search(nums, target);
+    var index = BiinarySearch.Search(nums, target);
 
     WriteLine($"{i + 1}.\tArray to search: [{string.Join(", ", nums)}]");
     WriteLine($"\tTarget: {target}");

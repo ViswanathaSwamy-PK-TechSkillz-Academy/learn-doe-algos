@@ -1,6 +1,6 @@
-namespace CSBinarySearch.Algo;
+namespace BinarySearch.Algo;
 
-public static class BinarySearch
+public static class BiinarySearch
 {
     // Performs a binary search on a sorted array of integers.
     // Returns the index of the target if found, or -1 if the target is not in the array.
@@ -11,7 +11,7 @@ public static class BinarySearch
 
         while (low <= high)
         {
-            int mid = low + ((high - low) / 2);
+            int mid = low + (high - low) / 2;
             if (nums[mid] == target)
             {
                 return mid;
