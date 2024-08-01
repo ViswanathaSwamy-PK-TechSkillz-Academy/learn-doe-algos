@@ -50,7 +50,11 @@ public class CustomQueue<T>
 
     public override string ToString()
     {
-        if (Size == 0) return "[]";
+        if (Size == 0)
+        {
+            return "[]";
+        }
+
         QueueNode<T>? temp = _head;
         string? outStr = "[";
         while (temp != null)
