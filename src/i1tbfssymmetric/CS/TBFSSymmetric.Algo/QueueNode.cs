@@ -1,13 +1,10 @@
+// File: QueueNode.cs
+
 namespace TBFSSymmetric.Algo;
 
-public class QueueNode<T>
+public class QueueNode<T>(T value)
 {
-    public T Value { get; set; }
-    public QueueNode<T>? Next { get; set; }
+    public T Value { get; set; } = value;
 
-    public QueueNode(T value)
-    {
-        Value = value;
-        Next = null;
-    }
+    public QueueNode<T>? Next { get; set; } = null;
 }

@@ -1,28 +1,34 @@
-﻿using TBFSSymmetric.Algo;
+﻿// File: Program.cs
 
-var inputTreesData = new List<List<TreeNode<int>?>>()
-{
-    new List<TreeNode<int>?> { new TreeNode<int>(1), new TreeNode<int>(2), new TreeNode<int>(2), new TreeNode<int>(3), new TreeNode<int>(4), new TreeNode<int>(4), new TreeNode<int>(3) },
-    new List<TreeNode<int>?> { new TreeNode<int>(18), new TreeNode<int>(21), new TreeNode<int>(21), new TreeNode<int>(47), new TreeNode<int>(20), new TreeNode<int>(21), new TreeNode<int>(47) },
-    new List<TreeNode<int>?> { new TreeNode<int>(25), new TreeNode<int>(4), new TreeNode<int>(67), new TreeNode<int>(2), new TreeNode<int>(3), new TreeNode<int>(3), new TreeNode<int>(2) },
-    new List<TreeNode<int>?> { new TreeNode<int>(1), new TreeNode<int>(2), new TreeNode<int>(2), new TreeNode<int>(3), null, null, new TreeNode<int>(3) },
-    new List<TreeNode<int>?> { new TreeNode<int>(1), new TreeNode<int>(2), new TreeNode<int>(2), null, new TreeNode<int>(3), new TreeNode<int>(3), null, new TreeNode<int>(4), new TreeNode<int>(5), new TreeNode<int>(5), new TreeNode<int>(4) }
-};
+using TBFSSymmetric.Algo;
 
-var inputTrees = inputTreesData.Select(treeData => new BinaryTree<int>(treeData)).ToList();
+List<List<TreeNode<int>?>>? inputTreesData =
+[
+    [new(1), new(2), new(2), new(3), new(4), new(4), new(3)],
+    [new(18), new(21), new(21), new(47), new(20), new(21), new(47)],
+    [new(25), new(4), new(67), new(2), new(3), new(3), new(2)],
+    [new(1), new(2), new(2), new(3), null, null, new(3)],
+    [new(1), new(2), new(2), null, new(3), new(3), null, new(4), new(5), new(5), new(4)]
+];
+
+
+List<BinaryTree<int>>? inputTrees = inputTreesData.Select(treeData => new BinaryTree<int>(treeData)).ToList();
 
 for (int i = 0; i < inputTrees.Count; i++)
 {
-    var tree = inputTrees[i];
+    BinaryTree<int>? tree = inputTrees[i];
     WriteLine($"{i + 1} .\tInput Tree:");
     DisplayTree(tree.Root);
     WriteLine($"\n\tResult: {SymmetricTreeChecker.IsSymmetric(tree.Root)}");
     WriteLine(new string('-', 100));
 }
 
-void DisplayTree(TreeNode<int>? root)
+static void DisplayTree(TreeNode<int>? root)
 {
-    if (root == null) return;
+    if (root == null)
+    {
+        return;
+    }
     Write($"{root.Data} ");
     DisplayTree(root.Left);
     DisplayTree(root.Right);

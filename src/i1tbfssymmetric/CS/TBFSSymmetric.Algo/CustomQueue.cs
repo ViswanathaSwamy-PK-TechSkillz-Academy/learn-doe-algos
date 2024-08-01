@@ -1,3 +1,7 @@
+// File: CustomQueue.cs
+
+using System.Text;
+
 namespace TBFSSymmetric.Algo;
 
 public class CustomQueue<T>
@@ -7,17 +11,22 @@ public class CustomQueue<T>
     private int _size;
 
     public int Size => _size;
+
     public bool IsEmpty => _size == 0;
 
     public T Peek()
     {
-        if (IsEmpty) throw new InvalidOperationException("Queue is empty.");
+        if (IsEmpty)
+        {
+            throw new InvalidOperationException("Queue is empty.");
+        }
+
         return _head!.Value;
     }
 
     public void Enqueue(T value)
     {
-        var temp = new QueueNode<T>(value);
+        QueueNode<T>? temp = new(value);
         if (_head == null)
         {
             _head = temp;
@@ -33,8 +42,11 @@ public class CustomQueue<T>
 
     public T Dequeue()
     {
-        if (IsEmpty) throw new InvalidOperationException("Queue is empty.");
-        var value = _head!.Value;
+        if (IsEmpty)
+        {
+            throw new InvalidOperationException("Queue is empty.");
+        }
+        T? value = _head!.Value;
         _head = _head.Next;
         _size--;
         return value;
@@ -42,14 +54,18 @@ public class CustomQueue<T>
 
     public override string ToString()
     {
-        if (Size == 0) return "[]";
-        var temp = _head;
-        var outStr = "[";
+        if (Size == 0)
+        {
+            return "[]";
+        }
+
+        QueueNode<T>? temp = _head;
+        StringBuilder? outStr = new("[");
         while (temp != null)
         {
-            outStr += $"{temp.Value}, ";
+            outStr.Append(temp.Value).Append(", ");
             temp = temp.Next;
         }
-        return outStr.TrimEnd(',', ' ') + "]";
+        return outStr.ToString().TrimEnd(',', ' ') + "]";
     }
 }
