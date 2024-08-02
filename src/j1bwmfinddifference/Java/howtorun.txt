@@ -1,0 +1,8 @@
+Compile
+-----------
+D:\TSA\learn-doe-algos\src\j1bwmfinddifference\Java> $files = Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullName }
+D:\TSA\learn-doe-algos\src\j1bwmfinddifference\Java> javac $files
+
+Execute
+--------
+D:\TSA\learn-doe-algos\src\j1bwmfinddifference\Java> java com.example.main.Main
