@@ -1,6 +1,7 @@
-﻿using Tpp.Algo;
+﻿// File: Program.cs
+using Tpp.Algo;
 
-string[] testCases = { "RACEACAR", "A", "ABCDEFGFEDCBA", "ABC", "ABCBA", "ABBA", "RACEACAR" };
+string[] testCases = ["RACEACAR", "A", "ABCDEFGFEDCBA", "ABC", "ABCBA", "ABBA", "RACEACAR"];
 int i = 1;
 
 foreach (string s in testCases)
