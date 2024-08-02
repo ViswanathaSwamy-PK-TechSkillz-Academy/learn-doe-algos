@@ -1,6 +1,6 @@
 // File: FindDifference.cs
 
-namespace FindDifference;
+namespace BWMFindDifference.Algo;
 
 public static class DifferenceFinder
 {

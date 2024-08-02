@@ -39,6 +39,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "i1tbfssymmetric", "i1tbfssy
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TBFSSymmetric.Algo", "i1tbfssymmetric\CS\TBFSSymmetric.Algo\TBFSSymmetric.Algo.csproj", "{2F7A59FD-AF5B-4F1F-B08A-08CD6B45CA3B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "j1bwmfinddifference", "j1bwmfinddifference", "{9FD63D24-C95D-4150-93D5-440811689FD3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BWMFindDifference.Algo", "j1bwmfinddifference\CS\BWMFindDifference.Algo\BWMFindDifference.Algo.csproj", "{7EDE6214-3217-46BF-AA65-A2D8F6F55477}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +85,10 @@ Global
 		{2F7A59FD-AF5B-4F1F-B08A-08CD6B45CA3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F7A59FD-AF5B-4F1F-B08A-08CD6B45CA3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F7A59FD-AF5B-4F1F-B08A-08CD6B45CA3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EDE6214-3217-46BF-AA65-A2D8F6F55477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EDE6214-3217-46BF-AA65-A2D8F6F55477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EDE6214-3217-46BF-AA65-A2D8F6F55477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EDE6214-3217-46BF-AA65-A2D8F6F55477}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +103,7 @@ Global
 		{C8C69A18-3685-482A-B722-855AD8D8C779} = {826F7BF4-FAAA-4F6F-AC08-52F0D2AEF9AE}
 		{260A573F-4DF2-4BC1-A6E8-53E11E7627CE} = {501237B7-6C33-41BD-AE82-328347080980}
 		{2F7A59FD-AF5B-4F1F-B08A-08CD6B45CA3B} = {4FEB9941-4456-4876-B093-3136FCF3E89A}
+		{7EDE6214-3217-46BF-AA65-A2D8F6F55477} = {9FD63D24-C95D-4150-93D5-440811689FD3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AF324E27-125F-41CE-92E5-393C4295713D}

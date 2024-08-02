@@ -1,6 +1,6 @@
 ﻿// File: Program.cs
 
-using FindDifference;
+using BWMFindDifference.Algo;
 
 string[] string1List = { "wxyz", "cbda", "jlkmn", "courae", "hello" };
 string[] string2List = { "zwxgy", "abc", "klmn", "couearg", "helo" };
