@@ -1,4 +1,6 @@
-﻿using static MatricesSMZ.Algo.Matrix;
+﻿// File: Program.cs
+
+using static MatricesSMZ.Algo.Matrix;
 using static MatricesSMZ.Algo.MatrixUtil;
 
 List<int[][]> matrices =
