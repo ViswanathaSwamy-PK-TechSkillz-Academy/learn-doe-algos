@@ -6,9 +6,9 @@ public static class MatrixUtil
 {
     public static void PrintMatrix(int[][] matrix)
     {
-        foreach (var row in matrix)
+        foreach (int[]? row in matrix)
         {
-            Console.WriteLine(string.Join(" ", row));
+            WriteLine(string.Join(" ", row));
         }
     }
 }
