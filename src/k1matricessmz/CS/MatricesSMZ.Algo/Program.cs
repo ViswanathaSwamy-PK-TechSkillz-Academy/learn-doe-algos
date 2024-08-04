@@ -1,6 +1,5 @@
-﻿using MatricesSMZ.Algo;
-using static MatrixUtil;
-using static Matrix;
+﻿using static MatricesSMZ.Algo.MatrixUtil;
+using static MatricesSMZ.Algo.Matrix;
 
 var matrices = new List<int[][]>
 {
