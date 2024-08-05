@@ -1,0 +1,8 @@
+Compile
+-----------
+D:\TSA\learn-doe-algos\src\k1matricessmz\Java> $files = Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullName }
+D:\TSA\learn-doe-algos\src\k1matricessmz\Java> javac $files
+
+Execute
+--------
+D:\TSA\learn-doe-algos\src\k1matricessmz\Java> java com.example.main.Main
