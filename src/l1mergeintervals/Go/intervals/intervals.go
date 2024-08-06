@@ -3,7 +3,6 @@ package intervals
 import (
 	"fmt"
 	"os"
-	"sort"
 	"strings"
 	"text/tabwriter"
 )
@@ -13,11 +12,6 @@ func MergeIntervals(intervals [][]int) [][]int {
 	if len(intervals) == 0 {
 		return nil
 	}
-
-	// Sort intervals by starting time
-	sort.Slice(intervals, func(i, j int) bool {
-		return intervals[i][0] < intervals[j][0]
-	})
 
 	result := make([][]int, 0)
 	result = append(result, intervals[0])
