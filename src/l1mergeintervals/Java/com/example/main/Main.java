@@ -1,26 +1,26 @@
-// File: Main.java
-
 package com.example.main;
 
-import com.example.matricessmz.*;
+import java.util.Arrays;
+import java.util.List;
+import com.example.mergeintervals.*;
 
 public class Main {
     public static void main(String[] args) {
-        int[][][] matrices = {
-                { { 1, 1, 0 }, { 1, 0, 1 }, { 1, 1, 1 } },
-                { { 1, 1, 1, 1, 1 }, { 0, 0, 1, 1, 1 }, { 1, 1, 1, 1, 0 }, { 1, 1, 1, 1, 1 } },
-                { { 3, 5, 2, 0 }, { 1, 0, 4, 6 }, { 7, 3, 2, 4 } },
-                { { 1, 2, 3, 4 }, { 4, 5, 6, 7 }, { 8, 9, 4, 6 } },
-                { { 2, 6, 5, 4, 9, 1 }, { 7, 2, 0, 0, 5, 4 }, { 1, 1, 1, 1, 0, 1 }, { 9, 8, 2, 0, 1, 3 },
-                        { 7, 8, 6, 5, 4, 3 }, { 9, 8, 1, 2, 5, 6 } }
-        };
+        List<int[][]> inputList = Arrays.asList(
+                new int[][] { { 1, 5 }, { 3, 7 }, { 4, 6 } },
+                new int[][] { { 1, 5 }, { 4, 6 }, { 6, 8 }, { 11, 15 } },
+                new int[][] { { 3, 7 }, { 6, 8 }, { 10, 12 }, { 11, 15 } },
+                new int[][] { { 1, 5 } },
+                new int[][] { { 1, 9 }, { 3, 8 }, { 4, 4 } },
+                new int[][] { { 1, 2 }, { 3, 4 }, { 8, 8 } },
+                new int[][] { { 1, 5 }, { 1, 3 } },
+                new int[][] { { 1, 5 }, { 6, 9 } },
+                new int[][] { { 0, 0 }, { 1, 18 }, { 1, 3 } });
 
-        for (int i = 0; i < matrices.length; i++) {
-            System.out.println((i + 1) + ". \tOriginal Matrix:");
-            MatrixUtil.printMatrix(matrices[i]);
-            int[][] result = Matrix.setMatrixZeros(matrices[i]);
-            System.out.println("\n\tMatrix with Zeros:");
-            MatrixUtil.printMatrix(result);
+        for (int i = 0; i < inputList.size(); i++) {
+            System.out.println((i + 1) + ". Intervals to merge: " + Arrays.deepToString(inputList.get(i)));
+            int[][] result = IntervalMerger.mergeIntervals(inputList.get(i));
+            System.out.println("Merged intervals: " + Arrays.deepToString(result));
             System.out.println("-".repeat(100));
         }
     }
