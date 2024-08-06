@@ -1,17 +1,17 @@
 ﻿using MergeIntervals.Algo;
 
-var inputList = new List<List<int[]>>
-            {
-                new List<int[]> { new int[] { 1, 5 }, new int[] { 3, 7 }, new int[] { 4, 6 } },
-                new List<int[]> { new int[] { 1, 5 }, new int[] { 4, 6 }, new int[] { 6, 8 }, new int[] { 11, 15 } },
-                new List<int[]> { new int[] { 3, 7 }, new int[] { 6, 8 }, new int[] { 10, 12 }, new int[] { 11, 15 } },
-                new List<int[]> { new int[] { 1, 5 } },
-                new List<int[]> { new int[] { 1, 9 }, new int[] { 3, 8 }, new int[] { 4, 4 } },
-                new List<int[]> { new int[] { 1, 2 }, new int[] { 3, 4 }, new int[] { 8, 8 } },
-                new List<int[]> { new int[] { 1, 5 }, new int[] { 1, 3 } },
-                new List<int[]> { new int[] { 1, 5 }, new int[] { 6, 9 } },
-                new List<int[]> { new int[] { 0, 0 }, new int[] { 1, 18 }, new int[] { 1, 3 } }
-            };
+List<List<int[]>> inputList =
+[
+                [[1, 5], [3, 7], [4, 6]],
+                [[1, 5], [4, 6], [6, 8], [11, 15]],
+                [[3, 7], [6, 8], [10, 12], [11, 15]],
+                [[1, 5]],
+                [[1, 9], [3, 8], [4, 4]],
+                [[1, 2], [3, 4], [8, 8]],
+                [[1, 5], [1, 3]],
+                [[1, 5], [6, 9]],
+                [[0, 0], [1, 18], [1, 3]]
+            ];
 
 foreach (var intervals in inputList)
 {

@@ -6,7 +6,7 @@ public static class IntervalMerger
     {
         if (intervals.Count == 0)
         {
-            return new List<int[]>();
+            return [];
         }
 
         var result = new List<int[]>
@@ -16,10 +16,10 @@ public static class IntervalMerger
 
         for (int i = 1; i < intervals.Count; i++)
         {
-            var lastAddedInterval = result[^1];
-            var currentInterval = intervals[i];
-            var curStart = currentInterval[0];
-            var curEnd = currentInterval[1];
+            int[]? lastAddedInterval = result[^1];
+            int[]? currentInterval = intervals[i];
+            int curStart = currentInterval[0];
+            int curEnd = currentInterval[1];
 
             if (lastAddedInterval[1] >= curStart)
             {
