@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace MergeIntervals.Algo;
 
 public static class IntervalMerger
