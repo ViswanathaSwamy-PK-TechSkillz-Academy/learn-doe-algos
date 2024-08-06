@@ -15,8 +15,8 @@ var inputList = new List<List<int[]>>
 
 foreach (var intervals in inputList)
 {
-    Console.WriteLine($"Intervals to merge: {string.Join(", ", intervals.Select(i => $"[{i[0]}, {i[1]}]"))}");
+    WriteLine($"Intervals to merge: {string.Join(", ", intervals.Select(i => $"[{i[0]}, {i[1]}]"))}");
     var result = IntervalMerger.MergeIntervals(intervals);
-    Console.WriteLine($"Merged intervals: {string.Join(", ", result.Select(i => $"[{i[0]}, {i[1]}]"))}");
-    Console.WriteLine(new string('-', 100));
+    WriteLine($"Merged intervals: {string.Join(", ", result.Select(i => $"[{i[0]}, {i[1]}]"))}");
+    WriteLine(new string('-', 100));
 }

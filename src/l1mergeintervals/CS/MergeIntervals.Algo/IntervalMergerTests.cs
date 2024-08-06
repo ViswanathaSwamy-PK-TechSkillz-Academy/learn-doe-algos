@@ -22,11 +22,11 @@ class IntervalMergerTests
             var result = IntervalMerger.MergeIntervals(intervals);
             if (!IntervalsEqual(result, expected))
             {
-                Console.WriteLine($"Test failed: expected {string.Join(", ", expected.Select(i => $"[{i[0]}, {i[1]}]"))}, but got {string.Join(", ", result.Select(i => $"[{i[0]}, {i[1]}]"))}");
+                WriteLine($"Test failed: expected {string.Join(", ", expected.Select(i => $"[{i[0]}, {i[1]}]"))}, but got {string.Join(", ", result.Select(i => $"[{i[0]}, {i[1]}]"))}");
             }
             else
             {
-                Console.WriteLine($"Test passed.");
+                WriteLine($"Test passed.");
             }
         }
     }
