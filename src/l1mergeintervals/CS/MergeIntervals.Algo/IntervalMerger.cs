@@ -9,10 +9,10 @@ public static class IntervalMerger
             return [];
         }
 
-        var result = new List<int[]>
-        {
+        List<int[]>? result =
+        [
             intervals[0]
-        };
+        ];
 
         for (int i = 1; i < intervals.Count; i++)
         {
