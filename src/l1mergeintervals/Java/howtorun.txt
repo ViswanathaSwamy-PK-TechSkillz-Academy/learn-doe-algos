@@ -1,0 +1,8 @@
+Compile
+-----------
+D:\TSA\learn-doe-algos\src\l1mergeintervals\Java> $files = Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullName }
+D:\TSA\learn-doe-algos\src\l1mergeintervals\Java> javac $files
+
+Execute
+--------
+D:\TSA\learn-doe-algos\src\l1mergeintervals\Java> java com.example.main.Main
