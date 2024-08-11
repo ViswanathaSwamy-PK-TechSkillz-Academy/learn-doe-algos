@@ -1,13 +1,8 @@
-﻿using StacksRAD.Algo;
+﻿// File: Program.cs
 
-var inputs = new List<string>
-        {
-            "g",
-            "ggaabcdeb",
-            "abbddaccaaabcd",
-            "aannkwwwkkkwna",
-            "abbabccblkklu"
-        };
+using StacksRAD.Algo;
+
+List<string> inputs = ["g", "ggaabcdeb", "abbddaccaaabcd", "aannkwwwkkkwna", "abbabccblkklu"];
 
 for (int i = 0; i < inputs.Count; i++)
 {
