@@ -1,4 +1,5 @@
 // Palindrome.cs
+
 namespace Tpp.Algo;
 
 public static class PalindromeChecker

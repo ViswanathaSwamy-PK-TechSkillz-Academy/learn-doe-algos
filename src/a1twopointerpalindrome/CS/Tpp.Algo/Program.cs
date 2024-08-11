@@ -1,4 +1,5 @@
 ﻿// File: Program.cs
+
 using Tpp.Algo;
 
 string[] testCases = ["RACEACAR", "A", "ABCDEFGFEDCBA", "ABC", "ABCBA", "ABBA", "RACEACAR"];

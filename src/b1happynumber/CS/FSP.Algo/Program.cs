@@ -1,6 +1,8 @@
-﻿using FSP.Algo;
+﻿// File: Program.cs
 
-int[] inputs = { 1, 5, 19, 25, 7 };
+using FSP.Algo;
+
+int[] inputs = [1, 5, 19, 25, 7];
 
 foreach (int input in inputs)
 {
