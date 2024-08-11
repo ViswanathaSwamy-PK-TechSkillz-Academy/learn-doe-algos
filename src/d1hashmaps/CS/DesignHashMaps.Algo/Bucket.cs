@@ -55,7 +55,7 @@ public class Bucket
     {
         foreach (Pair? pair in pairs)
         {
-            Write($"{{key: {pair.Key}, value: {pair.Value}}} ");
+            Write($"{pair} ");
         }
     }
 }
