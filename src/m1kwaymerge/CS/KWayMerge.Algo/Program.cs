@@ -1,4 +1,4 @@
-﻿using MergingLibrary;
+﻿using KWayMerge.Algo;
 using System;
 
 int[][] nums1 = {

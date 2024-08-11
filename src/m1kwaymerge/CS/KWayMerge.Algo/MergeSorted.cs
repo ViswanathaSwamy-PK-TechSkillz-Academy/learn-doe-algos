@@ -1,4 +1,4 @@
-namespace MergingLibrary;
+namespace KWayMerge.Algo;
 
 public static class MergeSorted
 {
