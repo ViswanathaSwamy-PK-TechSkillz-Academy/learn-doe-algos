@@ -1,15 +1,18 @@
+// File: DesignHashMap.cs
+
 namespace DesignHashMaps.Algo;
 
 // DesignHashMap represents a hash map.
 public class DesignHashMap
 {
-    private int keySpace;
-    private Bucket[] buckets; // Array of Buckets
+    private readonly int keySpace;
+    private readonly Bucket[] buckets; // Array of Buckets
 
     public DesignHashMap()
     {
         keySpace = 2069;
         buckets = new Bucket[keySpace];
+
         for (int i = 0; i < keySpace; i++)
         {
             buckets[i] = new Bucket();
@@ -20,6 +23,7 @@ public class DesignHashMap
     public void Put(int key, int value)
     {
         int hashKey = key % keySpace;
+
         buckets[hashKey].Update(key, value);
     }
 
@@ -27,6 +31,7 @@ public class DesignHashMap
     public int Get(int key)
     {
         int hashKey = key % keySpace;
+
         return buckets[hashKey].Get(key);
     }
 
@@ -34,6 +39,7 @@ public class DesignHashMap
     public void Remove(int key)
     {
         int hashKey = key % keySpace;
+
         buckets[hashKey].Remove(key);
     }
 
