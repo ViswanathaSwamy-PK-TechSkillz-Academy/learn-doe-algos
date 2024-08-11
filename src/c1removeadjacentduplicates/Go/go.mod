@@ -1,3 +1,3 @@
-module A5RemoveAdjacentDuplicates
+module c1removeadjacentduplicates
 
-go 1.22.5
+go 1.22.6

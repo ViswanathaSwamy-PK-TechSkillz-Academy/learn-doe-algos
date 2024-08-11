@@ -1,3 +1,3 @@
-module D1HashMaps
+module d1hashmaps
 
-go 1.22.5
+go 1.22.6
