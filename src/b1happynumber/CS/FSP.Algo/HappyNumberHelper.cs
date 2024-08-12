@@ -1,3 +1,5 @@
+// File: PalindromeChecker.cs
+
 namespace FSP.Algo;
 
 public class HappyNumberHelper
@@ -6,19 +8,21 @@ public class HappyNumberHelper
     private static int SumOfSquaredDigits(int number)
     {
         int totalSum = 0;
+
         while (number > 0)
         {
             int digit = number % 10;
             number /= 10;
             totalSum += digit * digit;
         }
+
         return totalSum;
     }
 
     // Function to check if a number is a happy number
     public static bool IsHappyNumber(int n)
     {
-        HashSet<int> seen = new HashSet<int>();
+        HashSet<int> seen = [];
 
         while (n != 1 && !seen.Contains(n))
         {

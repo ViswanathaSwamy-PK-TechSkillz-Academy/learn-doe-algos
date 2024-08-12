@@ -1,25 +1,28 @@
+// File: Bucket.cs
+
 namespace DesignHashMaps.Algo;
 
 // Bucket represents a bucket for storing key-value pairs.
 public class Bucket
 {
-    private List<Pair> pairs; // List to store key-value pairs
+    private readonly List<Pair> pairs; // List to store key-value pairs
 
     public Bucket()
     {
-        pairs = new List<Pair>(); // Initialize the list
+        pairs = []; // Initialize the list
     }
 
     // Get returns the value associated with the key if it exists, otherwise returns -1.
     public int Get(int key)
     {
-        foreach (var pair in pairs)
+        foreach (Pair? pair in pairs)
         {
             if (pair.Key == key)
             {
                 return pair.Value;
             }
         }
+
         return -1;
     }
 
@@ -34,6 +37,7 @@ public class Bucket
                 return;
             }
         }
+
         pairs.Add(new Pair(key, value));
     }
 
@@ -49,9 +53,9 @@ public class Bucket
     // PrintPairs prints the key-value pairs in the bucket.
     public void PrintPairs()
     {
-        foreach (var pair in pairs)
+        foreach (Pair? pair in pairs)
         {
-            Write($"{{key: {pair.Key}, value: {pair.Value}}} ");
+            Write($"{pair} ");
         }
     }
 }

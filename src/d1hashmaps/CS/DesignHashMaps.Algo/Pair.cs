@@ -1,14 +1,17 @@
+// File: Pair.cs
+
 namespace DesignHashMaps.Algo;
 
 // Pair represents a key-value pair.
-public class Pair
+public class Pair(int key, int value)
 {
-    public int Key { get; set; }
-    public int Value { get; set; }
+    public int Key { get; set; } = key;
 
-    public Pair(int key, int value)
+    public int Value { get; set; } = value;
+
+    // Override ToString() to provide a string representation of the Pair
+    public override string ToString()
     {
-        Key = key;
-        Value = value;
+        return $"{{key: {Key}, value: {Value}}}";
     }
 }
