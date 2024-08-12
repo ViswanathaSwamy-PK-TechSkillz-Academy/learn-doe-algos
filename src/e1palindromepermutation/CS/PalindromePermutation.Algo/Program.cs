@@ -1,10 +1,8 @@
-﻿using PalindromePermutation.Algo;
+﻿// File: Program.cs
 
-var testCases = new string[]
-            {
-                "code", "aab", "carerac", "racecar", "hello",
-                "baefeab", "abc", "xzz", "jjadd", "kllk"
-            };
+using PalindromePermutation.Algo;
+
+string[] testCases = ["code", "aab", "carerac", "racecar", "hello", "baefeab", "abc", "xzz", "jjadd", "kllk"];
 
 foreach (var testCase in testCases)
 {
