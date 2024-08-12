@@ -1,29 +1,26 @@
 // File: BinaryTree.cs
 
-public class BinaryTree<T>
+namespace TDFSDiameter.Algo;
+
+public class BinaryTree<T>(List<TreeNode<T>?> listOfNodes)
 {
-    public TreeNode<T>? Root { get; private set; }
+    public TreeNode<T>? Root { get; private set; } = BinaryTree<T>.CreateBinaryTree(listOfNodes);
 
-    public BinaryTree(List<TreeNode<T>?> listOfNodes)
-    {
-        Root = CreateBinaryTree(listOfNodes);
-    }
-
-    private TreeNode<T>? CreateBinaryTree(List<TreeNode<T>?> listOfNodes)
+    private static TreeNode<T>? CreateBinaryTree(List<TreeNode<T>?> listOfNodes)
     {
         if (listOfNodes == null || listOfNodes.Count == 0 || listOfNodes[0] == null)
         {
             return null;
         }
 
-        var root = listOfNodes[0];
-        var queue = new Queue<TreeNode<T>>();
+        TreeNode<T>? root = listOfNodes[0];
+        Queue<TreeNode<T>> queue = new();
         queue.Enqueue(root!);
 
         int i = 1;
         while (i < listOfNodes.Count)
         {
-            var current = queue.Dequeue();
+            TreeNode<T>? current = queue.Dequeue();
 
             if (i < listOfNodes.Count && listOfNodes[i] != null)
             {
@@ -43,15 +40,15 @@ public class BinaryTree<T>
         return root;
     }
 
-    private int DiameterHelper(TreeNode<T>? node, ref int diameter)
+    private static int DiameterHelper(TreeNode<T>? node, ref int diameter)
     {
         if (node == null)
         {
             return 0;
         }
 
-        int leftHeight = DiameterHelper(node.Left, ref diameter);
-        int rightHeight = DiameterHelper(node.Right, ref diameter);
+        int leftHeight = BinaryTree<T>.DiameterHelper(node.Left, ref diameter);
+        int rightHeight = BinaryTree<T>.DiameterHelper(node.Right, ref diameter);
 
         diameter = Math.Max(diameter, leftHeight + rightHeight);
 
@@ -61,10 +58,12 @@ public class BinaryTree<T>
     public int DiameterOfBinaryTree()
     {
         int diameter = 0;
+
         if (Root != null)
         {
-            DiameterHelper(Root, ref diameter);
+            BinaryTree<T>.DiameterHelper(Root, ref diameter);
         }
+
         return diameter;
     }
 }

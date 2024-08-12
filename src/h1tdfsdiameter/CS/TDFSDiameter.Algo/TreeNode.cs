@@ -1,13 +1,12 @@
 // File: TreeNode.cs
 
-public class TreeNode<T>
-{
-    public T Data { get; set; }
-    public TreeNode<T>? Left { get; set; }
-    public TreeNode<T>? Right { get; set; }
+namespace TDFSDiameter.Algo;
 
-    public TreeNode(T data)
-    {
-        Data = data;
-    }
+public class TreeNode<T>(T data)
+{
+    public T Data { get; set; } = data;
+
+    public TreeNode<T>? Left { get; set; }
+
+    public TreeNode<T>? Right { get; set; }
 }
