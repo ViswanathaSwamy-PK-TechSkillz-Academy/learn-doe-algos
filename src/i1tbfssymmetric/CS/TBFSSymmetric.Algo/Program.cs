@@ -17,6 +17,7 @@ List<BinaryTree<int>>? inputTrees = inputTreesData.Select(treeData => new Binary
 for (int i = 0; i < inputTrees.Count; i++)
 {
     BinaryTree<int>? tree = inputTrees[i];
+
     WriteLine($"{i + 1} .\tInput Tree:");
     DisplayTree(tree.Root);
     WriteLine($"\n\tResult: {SymmetricTreeChecker.IsSymmetric(tree.Root)}");
@@ -29,6 +30,7 @@ static void DisplayTree(TreeNode<int>? root)
     {
         return;
     }
+
     Write($"{root.Data} ");
     DisplayTree(root.Left);
     DisplayTree(root.Right);
