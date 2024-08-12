@@ -1,3 +1,5 @@
+// File: IntervalMergerTests.cs
+
 namespace MergeIntervals.Algo;
 
 class IntervalMergerTests
@@ -43,6 +45,7 @@ class IntervalMergerTests
         {
             if (a[i][0] != b[i][0] || a[i][1] != b[i][1]) return false;
         }
+
         return true;
     }
 

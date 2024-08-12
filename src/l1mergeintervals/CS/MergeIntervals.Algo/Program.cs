@@ -1,4 +1,6 @@
-﻿using MergeIntervals.Algo;
+﻿// File: Program.cs
+
+using MergeIntervals.Algo;
 
 List<List<int[]>> inputList =
 [
