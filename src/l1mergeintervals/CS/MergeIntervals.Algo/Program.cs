@@ -13,10 +13,10 @@ List<List<int[]>> inputList =
                 [[0, 0], [1, 18], [1, 3]]
             ];
 
-foreach (var intervals in inputList)
+foreach (List<int[]> intervals in inputList)
 {
     WriteLine($"Intervals to merge: {string.Join(", ", intervals.Select(i => $"[{i[0]}, {i[1]}]"))}");
-    var result = IntervalMerger.MergeIntervals(intervals);
+    List<int[]> result = IntervalMerger.MergeIntervals(intervals);
     WriteLine($"Merged intervals: {string.Join(", ", result.Select(i => $"[{i[0]}, {i[1]}]"))}");
     WriteLine(new string('-', 100));
 }
