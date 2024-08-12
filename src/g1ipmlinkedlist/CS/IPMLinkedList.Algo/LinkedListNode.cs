@@ -1,13 +1,10 @@
+// File: LinkedListNode.cs
+
 namespace IPMLinkedList.Algo;
 
-public class LinkedListNode
+public class LinkedListNode(int data, LinkedListNode? next = null)
 {
-    public int Data { get; set; }
-    public LinkedListNode? Next { get; set; }
+    public int Data { get; set; } = data;
 
-    public LinkedListNode(int data, LinkedListNode? next = null)
-    {
-        Data = data;
-        Next = next;
-    }
+    public LinkedListNode? Next { get; set; } = next;
 }

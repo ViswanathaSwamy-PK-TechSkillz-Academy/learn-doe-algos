@@ -1,10 +1,13 @@
+// File: DisplayLinkedList.cs
+
 namespace IPMLinkedList.Algo;
 
 public static class DisplayLinkedList
 {
     public static void DisplayWithForwardArrow(LinkedListNode? head)
     {
-        var temp = head;
+        LinkedListNode? temp = head;
+
         while (temp != null)
         {
             Write(temp.Data);
