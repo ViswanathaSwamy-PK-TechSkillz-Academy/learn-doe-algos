@@ -1,13 +1,14 @@
 // PalindromePermutation.cs
+
 namespace PalindromePermutation.Algo;
 
 public static class PalinPermutation
 {
     public static bool CanPermutePalindrome(string s)
     {
-        var charCount = new Dictionary<char, int>();
+        Dictionary<char, int> charCount = [];
 
-        foreach (var c in s)
+        foreach (char c in s)
         {
             if (charCount.ContainsKey(c))
             {
@@ -20,7 +21,7 @@ public static class PalinPermutation
         }
 
         int oddCount = 0;
-        foreach (var count in charCount.Values)
+        foreach (int count in charCount.Values)
         {
             if (count % 2 != 0)
             {

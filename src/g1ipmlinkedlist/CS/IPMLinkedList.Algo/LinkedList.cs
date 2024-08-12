@@ -1,3 +1,5 @@
+// File: LinkedList.cs
+
 namespace IPMLinkedList.Algo;
 
 public class LinkedList
@@ -21,14 +23,16 @@ public class LinkedList
     {
         for (int i = values.Length - 1; i >= 0; i--)
         {
-            var newNode = new LinkedListNode(values[i]);
+            LinkedListNode newNode = new(values[i]);
+
             InsertNodeAtHead(newNode);
         }
     }
 
     public void DisplayLinkedList()
     {
-        var temp = Head;
+        LinkedListNode? temp = Head;
+
         Write("[");
         while (temp != null)
         {
@@ -49,7 +53,7 @@ public class LinkedList
 
         while (current != null)
         {
-            var next = current.Next;
+            LinkedListNode? next = current.Next;
             current.Next = prev;
             prev = current;
             current = next;

@@ -1,23 +1,16 @@
 ﻿using BinarySearch.Algo;
 
-var numsLists = new[]
+int[][] numbersLists = [[], [0, 1], [1, 2, 3], [-1, 0, 3, 5, 9, 12], [-100, -67, -55, -50, -49, -40, -33, -22, -10, -5],];
+
+int[] targetList = [12, 1, 3, 9, -22];
+
+for (int i = 0; i < numbersLists.Length; i++)
 {
-    new int[] {},
-    new int[] {0, 1},
-    new int[] {1, 2, 3},
-    new int[] {-1, 0, 3, 5, 9, 12},
-    new int[] {-100, -67, -55, -50, -49, -40, -33, -22, -10, -5},
-};
+    int[] numbers = numbersLists[i];
+    int target = targetList[i];
+    int index = BinarySearchCls.Search(numbers, target);
 
-var targetList = new[] { 12, 1, 3, 9, -22 };
-
-for (int i = 0; i < numsLists.Length; i++)
-{
-    var nums = numsLists[i];
-    var target = targetList[i];
-    var index = BiinarySearch.Search(nums, target);
-
-    WriteLine($"{i + 1}.\tArray to search: [{string.Join(", ", nums)}]");
+    WriteLine($"{i + 1}.\tArray to search: [{string.Join(", ", numbers)}]");
     WriteLine($"\tTarget: {target}");
 
     if (index != -1)

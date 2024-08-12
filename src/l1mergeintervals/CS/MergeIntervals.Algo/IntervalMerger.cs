@@ -1,3 +1,5 @@
+// File: IntervalMerger.cs
+
 namespace MergeIntervals.Algo;
 
 public static class IntervalMerger
@@ -9,10 +11,7 @@ public static class IntervalMerger
             return [];
         }
 
-        List<int[]>? result =
-        [
-            intervals[0]
-        ];
+        List<int[]>? result = [intervals[0]];
 
         for (int i = 1; i < intervals.Count; i++)
         {

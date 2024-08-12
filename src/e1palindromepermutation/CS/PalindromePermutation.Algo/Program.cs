@@ -1,12 +1,10 @@
-﻿using PalindromePermutation.Algo;
+﻿// File: Program.cs
 
-var testCases = new string[]
-            {
-                "code", "aab", "carerac", "racecar", "hello",
-                "baefeab", "abc", "xzz", "jjadd", "kllk"
-            };
+using PalindromePermutation.Algo;
 
-foreach (var testCase in testCases)
+string[] testCases = ["code", "aab", "carerac", "racecar", "hello", "baefeab", "abc", "xzz", "jjadd", "kllk"];
+
+foreach (string testCase in testCases)
 {
     WriteLine($"Can \"{testCase}\" form a palindrome permutation? {PalinPermutation.CanPermutePalindrome(testCase)}");
 }

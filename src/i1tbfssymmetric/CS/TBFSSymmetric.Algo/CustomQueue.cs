@@ -66,6 +66,7 @@ public class CustomQueue<T>
             outStr.Append(temp.Value).Append(", ");
             temp = temp.Next;
         }
+
         return outStr.ToString().TrimEnd(',', ' ') + "]";
     }
 }

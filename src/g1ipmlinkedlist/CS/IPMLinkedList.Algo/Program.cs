@@ -1,19 +1,14 @@
 ﻿using IPMLinkedList.Algo;
+using System.Text;
 
-var input = new[]
-        {
-            new[] { 1, 2, 3, 4, 5 },
-            new[] { 1, 2, 3, 4, 5, 6 },
-            new[] { 3, 2, 1 },
-            new[] { 10 },
-            new[] { 1, 2 }
-        };
+int[][] inputs = [[1, 2, 3, 4, 5], [1, 2, 3, 4, 5, 6], [3, 2, 1], [10], [1, 2]];
 
-for (int i = 0; i < input.Length; i++)
+for (int i = 0; i < inputs.Length; i++)
 {
-    var linkedList = new LinkedList();
-    linkedList.CreateLinkedList(input[i]);
+    LinkedList linkedList = new();
+    linkedList.CreateLinkedList(inputs[i]);
 
+    OutputEncoding = Encoding.UTF8;
     Write($"{i + 1}. \tInput linked list: ");
     DisplayLinkedList.DisplayWithForwardArrow(linkedList.Head);
 
