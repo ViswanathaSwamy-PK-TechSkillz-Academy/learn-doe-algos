@@ -1,0 +1,17 @@
+{
+    "name": "missing-number-js",
+    "version": "1.0.0",
+    "description": "Missing Number Problem using Cyclic Sort Pattern in JavaScript",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "dependencies": {
+        "missing-number-js": "file:"
+    },
+    "devDependencies": {
+        "jest": "^29.6.2"
+    },
+    "author": "Viswanatha Swamy",
+    "license": "ISC"
+}
