@@ -1,4 +1,3 @@
-import test, { describe } from 'node:test';
 import { findMissingNumber } from './findMissingNumber';
 
 describe('findMissingNumber', () => {
@@ -12,7 +11,7 @@ describe('findMissingNumber', () => {
         ];
 
         testCases.forEach(({ nums, expected }) => {
-            expected(findMissingNumber(nums)).toBe(expected);
+            expect(findMissingNumber(nums)).toBe(expected);  // Corrected line
         });
     });
 });
