@@ -130,3 +130,36 @@ func TestFindMissingNumber(t *testing.T) {
    ```
 
 This approach modularizes your code, making it easier to maintain and test each component separately.
+
+The provided algorithm for finding the missing number using the Cyclic Sort pattern has a specific Big-O complexity. Let's break down the analysis.
+
+### Time Complexity
+
+1. **Cyclic Sort Loop (First While Loop):**
+
+   - The first loop iterates over each element in the array. During each iteration, the algorithm checks if the current element is at its correct position. If it is not, it swaps the element with the one at the index equal to the element's value.
+   - Each element is swapped at most once to reach its correct position.
+   - The total number of operations is proportional to the number of elements in the array.
+   - **Time Complexity:** \( O(n) \)
+
+2. **Finding the Missing Number (Second For Loop):**
+   - After the cyclic sort, the algorithm iterates over the array to find the index where the element does not match the index. This loop runs in linear time.
+   - **Time Complexity:** \( O(n) \)
+
+Since both loops run in linear time, the overall time complexity of the algorithm is:
+
+**Overall Time Complexity:** \( O(n) \)
+
+### Space Complexity
+
+- The algorithm does not use any extra space apart from a few integer variables. It operates in-place, meaning it only modifies the input array.
+- The space used is constant, regardless of the input size.
+
+**Space Complexity:** \( O(1) \)
+
+### Summary
+
+- **Time Complexity:** \( O(n) \)
+- **Space Complexity:** \( O(1) \)
+
+This makes the algorithm efficient both in terms of time and space, which is ideal for this kind of problem.
