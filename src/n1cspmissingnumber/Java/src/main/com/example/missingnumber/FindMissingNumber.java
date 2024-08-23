@@ -1,6 +1,6 @@
 // File: FindMissingNumber.java
 
-package src.main.com.example.missingnumber;
+package com.example.missingnumber;
 
 public class FindMissingNumber {
 

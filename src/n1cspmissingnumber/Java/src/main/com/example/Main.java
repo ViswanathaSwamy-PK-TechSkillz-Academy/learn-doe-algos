@@ -1,10 +1,10 @@
 // File: Main.java
 
-package src.main.com.example;
+package com.example;
 
 import java.util.Arrays;
 
-import src.main.com.example.missingnumber.FindMissingNumber;
+import com.example.missingnumber.FindMissingNumber;
 
 public class Main {
 
