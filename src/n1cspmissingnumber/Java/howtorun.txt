@@ -1,8 +1,16 @@
-Compile
------------
-D:\TSA\learn-doe-algos\src\m1kwaymerge\Java> $files = Get-ChildItem -Recurse -Filter *.java | ForEach-Object { $_.FullName }
-D:\TSA\learn-doe-algos\src\m1kwaymerge\Java> javac $files
+# How to Build and Run the Project
 
-Execute
---------
-D:\TSA\learn-doe-algos\src\m1kwaymerge\Java> java com.example.main.Main
+cd D:\TSA\learn-doe-algos\src\n1cspmissingnumber\Java
+gradle wrapper
+
+## Build the Project
+Run the following command to build the project:
+./gradlew build --warning-mode all
+
+## Run the Main Class
+Run the following command to execute the Main class:
+./gradlew run
+
+## Run Unit Tests
+Run the following command to execute unit tests:
+./gradlew test
