@@ -1,4 +1,6 @@
-﻿namespace CSPMissingNumber.Alog;
+﻿// File: MissingNumberFinder.cs
+
+namespace CSPMissingNumber.Alog;
 
 public static class MissingNumberFinder
 {

@@ -1,4 +1,6 @@
-﻿using CSPMissingNumber.Alog;
+﻿// File: Program.cs
+
+using CSPMissingNumber.Alog;
 
 var inputNumbers = new[]
         {
@@ -13,7 +15,7 @@ for (int i = 0; i < inputNumbers.Length; i++)
 {
     var numbers = inputNumbers[i];
 
-    Console.WriteLine($"{i + 1}.\tNumbers : {string.Join(", ", numbers)}");
-    Console.WriteLine($"\n\tMissing number: {MissingNumberFinder.FindMissingNumber(numbers)}");
-    Console.WriteLine(new string('-', 100));
+    WriteLine($"{i + 1}.\tNumbers : {string.Join(", ", numbers)}");
+    WriteLine($"\n\tMissing number: {MissingNumberFinder.FindMissingNumber(numbers)}");
+    WriteLine(new string('-', 100));
 }
