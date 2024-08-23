@@ -1,3 +1,5 @@
+// File: index.ts
+
 import { findMissingNumber } from './missingnumber/findMissingNumber';
 
 const inputNumbers: number[][] = [
