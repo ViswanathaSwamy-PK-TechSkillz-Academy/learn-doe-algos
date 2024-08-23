@@ -1,0 +1,60 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'jacoco'
+}
+
+jacoco {
+    toolVersion = '0.8.8' // Check for the latest version
+}
+
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    // JUnit 5 dependency for testing
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+}
+
+mainClassName = 'com.example.Main'
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src/test']
+        }
+    }
+}
+
+// Enable JUnit 5
+test {
+    useJUnitPlatform() // Use this if you're using JUnit 5
+    finalizedBy jacocoTestReport // Ensure the report is generated after tests
+}
+
+jacocoTestReport {
+    dependsOn test // Ensure tests are run before generating the report
+
+    reports {
+        xml {
+            enabled true // Enable XML report
+        }
+        html {
+            enabled true // Enable HTML report
+        }
+        csv {
+            enabled false // Disable CSV report
+        }
+    }
+}

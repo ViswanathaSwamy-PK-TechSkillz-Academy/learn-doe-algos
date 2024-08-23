@@ -1,0 +1,25 @@
+# How to Build and Run the Project
+
+cd D:\TSA\learn-doe-algos\src\n1cspmissingnumber\Java
+gradle wrapper
+
+./gradlew clean
+
+## Build the Project
+Run the following command to build the project:
+./gradlew build --warning-mode all
+./gradlew build --stacktrace
+
+## Run the Main Class
+Run the following command to execute the Main class:
+./gradlew run
+
+## Run Unit Tests
+Run the following command to execute unit tests:
+./gradlew test
+
+./gradlew build jacocoTestReport
+./gradlew build jacocoTestReport --info
+
+./gradlew dependencies
+

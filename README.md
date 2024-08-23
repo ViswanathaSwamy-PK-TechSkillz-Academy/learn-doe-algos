@@ -14,4 +14,6 @@ I am learning Algorithms from different Video Courses, Books, and Websites
 ```powershell
 npm install -g typescript
 npm install -g ts-node
+
+dotnet new console -o CSPMissingNumber.Alog -f net8.0 --dry-run
 ```
