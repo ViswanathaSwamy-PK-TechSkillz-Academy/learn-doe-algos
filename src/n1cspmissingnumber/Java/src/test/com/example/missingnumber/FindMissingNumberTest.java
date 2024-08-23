@@ -1,8 +1,9 @@
 // File: FindMissingNumberTest.java
 
-package com.example.missingnumber;
+package src.test.com.example.missingnumber;
 
 import org.junit.jupiter.api.Test;
+import src.main.com.example.missingnumber.FindMissingNumber;
 import static org.junit.jupiter.api.Assertions.*;
 
 class FindMissingNumberTest {
