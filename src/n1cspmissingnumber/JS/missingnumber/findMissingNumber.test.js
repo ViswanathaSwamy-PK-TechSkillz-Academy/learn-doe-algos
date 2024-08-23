@@ -1,3 +1,5 @@
+// File: findMissingNumber.test.js
+
 const findMissingNumber = require('./findMissingNumber');
 
 test('finds the missing number correctly', () => {

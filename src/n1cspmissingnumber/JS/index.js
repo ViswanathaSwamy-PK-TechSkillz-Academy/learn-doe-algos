@@ -1,3 +1,5 @@
+// File: index.js
+
 const findMissingNumber = require('./missingnumber/findMissingNumber');
 
 const inputNumbers = [

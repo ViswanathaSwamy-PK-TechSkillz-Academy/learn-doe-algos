@@ -1,3 +1,5 @@
+// File: findMissingNumber.ts
+
 export function findMissingNumber(nums: number[]): number {
     const lenNums = nums.length;
     let index = 0;
