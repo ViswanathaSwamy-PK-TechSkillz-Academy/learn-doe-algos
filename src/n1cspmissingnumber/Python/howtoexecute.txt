@@ -1,0 +1,4 @@
+Running the Code and Tests:
+
+> python main.py
+> python -m unittest test_missingnumber.py
