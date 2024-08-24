@@ -13,6 +13,7 @@ func FindMissingNumber(nums []int) int {
 			nums[index], nums[value] = nums[value], nums[index]
 			continue
 		}
+
 		index += 1
 	}
 
@@ -21,5 +22,6 @@ func FindMissingNumber(nums []int) int {
 			return i
 		}
 	}
+
 	return lenNums
 }
