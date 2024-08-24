@@ -32,5 +32,6 @@ func (kl *KthLargest) Add(val int) int {
 		heap.Pop(kl.topKHeap)
 		heap.Push(kl.topKHeap, val)
 	}
+
 	return (*kl.topKHeap)[0]
 }

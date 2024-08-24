@@ -17,9 +17,8 @@ func TestKthLargest(t *testing.T) {
 			k:        3,
 			nums:     []int{3, 6, 9, 10},
 			adds:     []int{4, 7, 10, 8, 15},
-			expected: []int{9, 9, 10, 10, 15},
+			expected: []int{6, 7, 9, 9, 10},
 		},
-		// Add more test cases as needed
 	}
 
 	for _, tc := range testCases {
