@@ -1,3 +1,6 @@
 go 1.23.0
 
-use ./n1cspmissingnumber/Go
+use (
+	./n1cspmissingnumber/Go
+	./o1tkeklargestnumber/Go
+)
