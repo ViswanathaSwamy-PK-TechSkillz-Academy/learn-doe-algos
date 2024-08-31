@@ -1,15 +1,19 @@
 {
-  "name": "python",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "kthlargestnumber",
+  "version": "1.0.1",
+  "description": "Kth largest number using Top K elements",
+  "author": "Viswanatha Swamy",
+  "license": "ISC",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "python": "file:"
+    "js": "file:",
+    "kthlargestnumber": "file:"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
