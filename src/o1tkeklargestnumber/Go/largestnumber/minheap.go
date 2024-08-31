@@ -1,6 +1,6 @@
 // File: minheap.go
 
-package largestnumber
+package kthlargest
 
 import (
 	"container/heap"
@@ -35,7 +35,6 @@ func (h *MinHeap) Pop() interface{} {
 	n := len(old)
 	x := old[n-1]
 	*h = old[0 : n-1]
-
 	return x
 }
 

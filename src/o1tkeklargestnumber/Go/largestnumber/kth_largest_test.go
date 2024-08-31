@@ -1,6 +1,6 @@
 // File: kth_largest_test.go
 
-package largestnumber
+package kthlargest
 
 import (
 	"testing"
