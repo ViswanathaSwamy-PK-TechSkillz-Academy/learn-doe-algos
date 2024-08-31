@@ -1,3 +1,3 @@
 py main.py
 
-python -m unittest test_kth_largest.py
+py -m unittest test_kth_largest.py
