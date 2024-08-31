@@ -1,0 +1,21 @@
+{
+  "name": "kthlargestnumber-ts",
+  "version": "1.0.1",
+  "description": "Kth largest number using Top K elements",
+  "author": "Viswanatha Swamy",
+  "license": "ISC",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.2.5",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "kthlargestnumber-ts": "file:"
+  }
+}
