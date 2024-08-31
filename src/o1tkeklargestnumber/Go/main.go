@@ -4,7 +4,7 @@ package main
 
 import (
 	"fmt"
-	kthlargest "o1tkeklargestnumber/largestnumber"
+	"o1tkeklargestnumber/kthlargest"
 	"strings"
 )
 
