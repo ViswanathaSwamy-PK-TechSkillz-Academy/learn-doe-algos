@@ -1,0 +1,7 @@
+npm init -y
+
+npm install --save-dev jest
+
+npm test -- --verbose
+
+node main.js
