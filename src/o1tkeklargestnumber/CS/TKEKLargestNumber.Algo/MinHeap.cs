@@ -1,14 +1,9 @@
 namespace TKEKLargestNumber.Algo;
 
-public class MinHeap
+public class MinHeap(int capacity)
 {
     private readonly PriorityQueue<int, int> _queue = new();
-    private readonly int _capacity;
-
-    public MinHeap(int capacity)
-    {
-        _capacity = capacity;
-    }
+    private readonly int _capacity = capacity;
 
     public int Count => _queue.Count;
 

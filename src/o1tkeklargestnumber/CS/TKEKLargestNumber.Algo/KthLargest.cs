@@ -8,7 +8,7 @@ public class KthLargest
     {
         _minHeap = new MinHeap(k);
 
-        foreach (var number in numbers)
+        foreach (int number in numbers)
         {
             Add(number);
         }
