@@ -1,7 +1,4 @@
-using Xunit;
-using KthLargestElement;
-
-namespace KthLargestElementTests
+namespace TKEKLargestNumber.Algo.Tests
 {
     public class KthLargestTests
     {

@@ -1,23 +1,23 @@
-namespace KthLargestElement
+namespace TKEKLargestNumber.Algo;
+
+public class KthLargest
 {
-    public class KthLargest
+    private readonly MinHeap _minHeap;
+
+    public KthLargest(int k, int[] numbers)
     {
-        private readonly MinHeap _minHeap;
+        _minHeap = new MinHeap(k);
 
-        public KthLargest(int k, int[] nums)
+        foreach (var number in numbers)
         {
-            _minHeap = new MinHeap(k);
-
-            foreach (var num in nums)
-            {
-                Add(num);
-            }
+            Add(number);
         }
+    }
 
-        public int Add(int val)
-        {
-            _minHeap.Add(val);
-            return _minHeap.Peek();
-        }
+    public int Add(int val)
+    {
+        _minHeap.Add(val);
+
+        return _minHeap.Peek();
     }
 }
