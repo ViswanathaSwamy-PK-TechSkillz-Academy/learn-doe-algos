@@ -4,7 +4,7 @@ namespace KthLargestElement
 {
     public class MinHeap
     {
-        private readonly SortedSet<int> _set = new();
+        private readonly PriorityQueue<int, int> _queue = new();
         private readonly int _capacity;
 
         public MinHeap(int capacity)
@@ -12,20 +12,21 @@ namespace KthLargestElement
             _capacity = capacity;
         }
 
-        public int Count => _set.Count;
+        public int Count => _queue.Count;
 
         public void Add(int value)
         {
-            _set.Add(value);
-            if (_set.Count > _capacity)
+            _queue.Enqueue(value, value);
+
+            if (_queue.Count > _capacity)
             {
-                _set.Remove(_set.Min);
+                _queue.Dequeue();
             }
         }
 
         public int Peek()
         {
-            return _set.Min;
+            return _queue.Peek();
         }
     }
 }
