@@ -17,12 +17,14 @@ repositories {
 
 dependencies {
     implementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
-    // JUnit 5 dependency for testing
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
 }
 
-mainClassName = 'com.example.Main'
+// mainClassName = 'com.example.Main'
+application {
+    mainClass.set('o1tkeklargestnumber.Java.src.main.com.example.Main') // Use this updated method
+}
 
 sourceSets {
     main {
@@ -37,7 +39,6 @@ sourceSets {
     }
 }
 
-// Enable JUnit 5
 test {
     useJUnitPlatform() // Use this if you're using JUnit 5
     finalizedBy jacocoTestReport // Ensure the report is generated after tests
