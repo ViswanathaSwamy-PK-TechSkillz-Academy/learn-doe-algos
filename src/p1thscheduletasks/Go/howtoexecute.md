@@ -10,4 +10,6 @@ go work use .
 
 ```powershell
 go test .\scheduler
+
+go run .
 ```
