@@ -3,4 +3,5 @@ go 1.23.1
 use (
 	./n1cspmissingnumber/Go
 	./o1tkeklargestnumber/Go
+	./p1thscheduletasks/Go
 )
